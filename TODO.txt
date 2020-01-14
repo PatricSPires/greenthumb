@@ -9,3 +9,4 @@ TODO:
 - [] GT-07: create a form component.
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
+- [] GT-10: create home screen.
