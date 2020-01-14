@@ -4,7 +4,7 @@ TODO:
 - [x] GT-03: add font Montserrat light and bold.
 - [] GT-04: create label component.
 - [] GT-05: create input component.
-- [] GT-06: create card component.
+- [x] GT-06: create card component.
 - [] GT-07: create a form component.
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
