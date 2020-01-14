@@ -9,4 +9,5 @@ TODO:
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
 - [] GT-10: create home screen.
-- [] GT-11: create button component.
+- [x] GT-11: create button component.
+- [] GT-12: create a file to add our base url.
