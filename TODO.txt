@@ -2,7 +2,6 @@ TODO:
 - [] GT-01: create an file to all variables like colors, font size and spaces.
 - [x] GT-02: create routing to aplication and pages.
 - [x] GT-03: add font Montserrat light and bold.
-- [] GT-03: create button component.
 - [] GT-04: create label component.
 - [] GT-05: create input component.
 - [] GT-06: create card component.
@@ -10,3 +9,4 @@ TODO:
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
 - [] GT-10: create home screen.
+- [] GT-11: create button component.
