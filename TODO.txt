@@ -10,5 +10,5 @@ TODO:
 - [x] GT-09: add assets to application.
 - [] GT-10: create home screen.
 - [x] GT-11: create button component.
-- [] GT-12: create a file to add our base url.
+- [x] GT-12: create a file to add our base url.
 - [x] GT-13: create water mark component.
