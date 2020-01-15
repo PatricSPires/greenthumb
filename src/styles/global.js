@@ -9,6 +9,7 @@ export default createGlobalStyle`
     outline: transparent;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
   }
 
   html, body, #root{

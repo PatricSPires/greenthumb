@@ -1,16 +1,35 @@
 import styled from 'styled-components';
+import HeroMobile from '../../assets/illustrations/illustration-home-mobile.png';
+import HeroDesktop from '../../assets/illustrations/illustration-home.png';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   width: 100%;
   padding-top: 24px;
-  background: url('../../assets/illustrations/illustration-home-mobile.png');
+  background-image: url(${HeroMobile});
+  background-repeat: no-repeat;
+  background-position-x: -14%;
+  background-position-y: 106%;
+  background-size: 84%;
+  height: 100vh;
 
   @media (min-width: 768px) {
+    width: 80%;
     margin: 0 auto;
+    background-position-x: center;
+    background-position-y: 114%;
+  }
+
+  @media (min-width: 1024px) {
+    align-items: flex-start;
+    background-image: url(${HeroDesktop});
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 80%;
+    background-size: 70%;
   }
 
   .logo {
@@ -20,15 +39,10 @@ export const Container = styled.div`
     @media (min-width: 768px) {
       width: 208px;
     }
-  }
-`;
 
-export const ContainerImage = styled.div`
-  .heroMobile {
-    width: 90vmin;
-    position: fixed;
-    bottom: -22px;
-    left: -22px;
+    @media (min-width: 1024px) {
+      margin-bottom: 96px;
+    }
   }
 `;
 
@@ -41,8 +55,12 @@ export const Title = styled.h1`
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 36px;
-`;
 
-export default {
-  Title,
-};
+  @media (min-width: 1024px) {
+    max-width: 433px;
+    margin: 0;
+    font-size: 66px;
+    text-align: left;
+    margin-bottom: 28px;
+  }
+`;
