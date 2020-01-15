@@ -29,6 +29,7 @@ const Card = styled.div`
 
     img {
       width: 69px;
+      height: 69px;
       margin-bottom: 16px;
     }
   }
