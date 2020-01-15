@@ -16,7 +16,7 @@ TODO:
 - [] GT-15: fix card component in water screen.
 - [x] GT-16: crate a pet page.
 - [x] GT-17: fix home screen. (The image and components are not supported in desktop mode).
-- [] GT-18: add route to button "start quizz".
+- [x] GT-18: add route to button "start quizz".
 - [] GT-19: Remove hover default from button (the button need to be ghost by default).
 - [] GT-20: add hover to image into cards at Sunlight page.
 - [] GT-21: adjust cards height into Water page.
