@@ -19,9 +19,17 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
+    background-position-x: center;
+    background-position-y: 114%;
+  }
+
+  @media (min-width: 1024px) {
+    align-items: flex-start;
     background-image: url(${HeroDesktop});
     background-position-x: right;
     background-position-y: bottom;
+    background-size: 80%;
+    background-size: 70%;
   }
 
   .logo {
@@ -30,6 +38,10 @@ export const Container = styled.div`
 
     @media (min-width: 768px) {
       width: 208px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 96px;
     }
   }
 `;
@@ -43,4 +55,12 @@ export const Title = styled.h1`
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 36px;
+
+  @media (min-width: 1024px) {
+    max-width: 433px;
+    margin: 0;
+    font-size: 66px;
+    text-align: left;
+    margin-bottom: 28px;
+  }
 `;
