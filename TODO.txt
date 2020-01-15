@@ -12,4 +12,5 @@ TODO:
 - [x] GT-11: create button component.
 - [x] GT-12: create a file to add our base url.
 - [x] GT-13: create water mark component.
-
+- [x] GT-14: create a water page.
+- [] GT-15: fix card component in water screen.
