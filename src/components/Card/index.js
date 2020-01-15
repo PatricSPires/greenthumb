@@ -15,6 +15,7 @@ const Card = styled.div`
 
   img {
     width: 42px;
+    height: 42px;
   }
 
   @media (min-width: 769px) {
@@ -29,6 +30,7 @@ const Card = styled.div`
 
     img {
       width: 69px;
+      height: 69px;
       margin-bottom: 16px;
     }
   }
