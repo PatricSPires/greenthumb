@@ -12,4 +12,18 @@ TODO:
 - [x] GT-11: create button component.
 - [x] GT-12: create a file to add our base url.
 - [x] GT-13: create water mark component.
-
+- [x] GT-14: create a water page.
+- [] GT-15: fix card component in water screen.
+- [x] GT-16: crate a pet page.
+- [] GT-17: fix home screen. (The image and components are not supported in desktop mode).
+- [] GT-18: add route to button "start quizz".
+- [] GT-19: Remove hover default from button (the button need to be ghost by default).
+- [] GT-20: add hover to image into cards at Sunlight page.
+- [] GT-21: adjust cards height into Water page.
+- [] GT-22: the watering can on the water page does not appear to be centralized.
+- [] GT-23: adjust title on the pets page. The "Do" need to be in the next line.
+- [] GT-24: adjust card height into pets page.
+- [] GT-25: fix the buttons routes into pets page. They're with water routes.
+- [] GT-26: save Sunlight preferences into local storage;
+- [] GT-27: save Water preferences into local storage;
+- [] GT-28: save Pets preferences into local storage;
