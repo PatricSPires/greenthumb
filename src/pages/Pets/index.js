@@ -42,11 +42,11 @@ export default function Pets() {
         <CardGroup>
           <Card>
             <img src={Pet} alt="" />
-            High sunlight
+            Yes
           </Card>
           <Card>
             <img src={NoAnswer} alt="" />
-            Low sunlight
+            No/They don't care
           </Card>
         </CardGroup>
         <ButtonGroup>

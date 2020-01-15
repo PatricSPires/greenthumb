@@ -73,6 +73,7 @@ export const CardGroup = styled.div`
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
+    height: auto;
   }
 `;
 
