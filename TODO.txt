@@ -14,3 +14,4 @@ TODO:
 - [x] GT-13: create water mark component.
 - [x] GT-14: create a water page.
 - [] GT-15: fix card component in water screen.
+- [x] GT-16: crate a pet page.
