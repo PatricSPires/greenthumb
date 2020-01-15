@@ -38,15 +38,15 @@ export default function Water() {
         <CardGroup>
           <Card>
             <img src={OneDrop} alt="" />
-            High sunlight
+            Rarely
           </Card>
           <Card>
             <img src={TwoDrops} alt="" />
-            Low sunlight
+            Regulary
           </Card>
           <Card>
             <img src={ThreeDrops} alt="" />
-            No sunlight
+            Daily
           </Card>
         </CardGroup>
         <ButtonGroup>
