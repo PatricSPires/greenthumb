@@ -18,8 +18,8 @@ import Logo from '../../assets/logo/logo-greenthumb.svg';
 import Dog from '../../assets/illustrations/dog.png';
 import Pet from '../../assets/icons/coral/pet.svg';
 import NoAnswer from '../../assets/icons/coral/no-answer.svg';
-import WhiteArrow from '../../assets/icons/white/whiteArrow.svg';
-import GreenArrow from '../../assets/icons/green/greenArrow.svg';
+import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
+import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
 
 export default function Pets() {
   return (
@@ -51,14 +51,14 @@ export default function Pets() {
         </CardGroup>
         <ButtonGroup>
           <a href="/pets">
-            <Button primary>
-              <img src={WhiteArrow} alt="Arrow" />
+            <Button>
+              <img src={GreenArrowRight} alt="Arrow" />
               finish
             </Button>
           </a>
           <a href="/sunlight">
             <Button>
-              <img src={GreenArrow} alt="" />
+              <img src={GreenArrowLeft} alt="" />
               previous
             </Button>
           </a>
