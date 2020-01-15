@@ -17,8 +17,8 @@ import Sun from '../../assets/illustrations/sun.png';
 import HighSun from '../../assets/icons/coral/high-sun.svg';
 import LowhSun from '../../assets/icons/coral/low-sun.svg';
 import NoAnswer from '../../assets/icons/coral/no-answer.svg';
-import WhiteArrow from '../../assets/icons/white/whiteArrow.svg';
-import GreenArrow from '../../assets/icons/green/greenArrow.svg';
+import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
+import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
 
 export default function Sunlight() {
   return (
@@ -51,14 +51,14 @@ export default function Sunlight() {
         </CardGroup>
         <ButtonGroup>
           <a href="/water">
-            <Button primary>
-              <img src={WhiteArrow} alt="Arrow" />
+            <Button>
+              <img src={GreenArrowRight} alt="Arrow" />
               next
             </Button>
           </a>
           <a href="/">
             <Button>
-              <img src={GreenArrow} alt="" />
+              <img src={GreenArrowLeft} alt="" />
               home
             </Button>
           </a>

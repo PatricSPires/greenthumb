@@ -18,8 +18,8 @@ import WateringCan from '../../assets/illustrations/wateringcan.png';
 import OneDrop from '../../assets/icons/green/one-drop.svg';
 import TwoDrops from '../../assets/icons/green/two-drops.svg';
 import ThreeDrops from '../../assets/icons/green/three-drops.svg';
-import WhiteArrow from '../../assets/icons/white/whiteArrow.svg';
-import GreenArrow from '../../assets/icons/green/greenArrow.svg';
+import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
+import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
 
 export default function Water() {
   return (
@@ -51,14 +51,14 @@ export default function Water() {
         </CardGroup>
         <ButtonGroup>
           <a href="/pets">
-            <Button primary>
-              <img src={WhiteArrow} alt="Arrow" />
+            <Button>
+              <img src={GreenArrowRight} alt="Arrow" />
               next
             </Button>
           </a>
           <a href="/sunlight">
             <Button>
-              <img src={GreenArrow} alt="" />
+              <img src={GreenArrowLeft} alt="" />
               previous
             </Button>
           </a>
