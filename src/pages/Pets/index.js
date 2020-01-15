@@ -50,13 +50,13 @@ export default function Pets() {
           </Card>
         </CardGroup>
         <ButtonGroup>
-          <a href="/pets">
+          <a href="/picks">
             <Button>
               <img src={GreenArrowRight} alt="Arrow" />
               finish
             </Button>
           </a>
-          <a href="/sunlight">
+          <a href="/water">
             <Button>
               <img src={GreenArrowLeft} alt="" />
               previous
