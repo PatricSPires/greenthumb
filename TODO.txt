@@ -24,6 +24,7 @@ TODO:
 - [] GT-23: adjust title on the pets page. The "Do" need to be in the next line.
 - [x] GT-24: adjust card height into pets page.
 - [x] GT-25: fix the buttons routes into pets page. They're with water routes.
-- [] GT-26: save Sunlight preferences into local storage;
+- [x] GT-26: save Sunlight preferences into local storage;
 - [x] GT-27: save Water preferences into local storage;
-- [] GT-28: save Pets preferences into local storage;
+- [x] GT-28: save Pets preferences into local storage;
+
