@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import {
   Title,
@@ -55,18 +56,18 @@ class Pets extends Component {
             </Card>
           </CardGroup>
           <ButtonGroup>
-            <a href="/picks">
+            <NavLink to="/picks">
               <Button>
                 <img src={GreenArrowRight} alt="Arrow" />
                 finish
               </Button>
-            </a>
-            <a href="/water">
+            </NavLink>
+            <NavLink to="/water">
               <Button>
                 <img src={GreenArrowLeft} alt="" />
                 previous
               </Button>
-            </a>
+            </NavLink>
           </ButtonGroup>
         </GeneralContainer>
       </>
