@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Title,
   LogoContainer,
@@ -55,18 +56,18 @@ class Sunlight extends Component {
             </Card>
           </CardGroup>
           <ButtonGroup>
-            <a href="/water">
+            <NavLink to="/water">
               <Button>
                 <img src={GreenArrowRight} alt="Arrow" />
                 next
               </Button>
-            </a>
-            <a href="/">
+            </NavLink>
+            <NavLink to="/">
               <Button>
                 <img src={GreenArrowLeft} alt="" />
                 home
               </Button>
-            </a>
+            </NavLink>
           </ButtonGroup>
         </GeneralContainer>
       </>

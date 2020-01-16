@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import {
   Title,
@@ -45,9 +46,9 @@ class Water extends Component {
               <img src={OneDrop} alt="" />
               Rarely
             </Card>
-            <Card onClick={() => this.setInputOption('regulary')}>
+            <Card onClick={() => this.setInputOption('regularly')}>
               <img src={TwoDrops} alt="" />
-              Regulary
+              Regularly
             </Card>
             <Card onClick={() => this.setInputOption('daily')}>
               <img src={ThreeDrops} alt="" />
@@ -55,18 +56,18 @@ class Water extends Component {
             </Card>
           </CardGroup>
           <ButtonGroup>
-            <a href="/pets">
+            <NavLink to="/pets">
               <Button>
                 <img src={GreenArrowRight} alt="Arrow" />
                 next
               </Button>
-            </a>
-            <a href="/sunlight">
+            </NavLink>
+            <NavLink to="/sunlight">
               <Button>
                 <img src={GreenArrowLeft} alt="" />
                 previous
               </Button>
-            </a>
+            </NavLink>
           </ButtonGroup>
         </GeneralContainer>
       </>
