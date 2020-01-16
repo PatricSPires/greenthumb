@@ -45,9 +45,9 @@ class Water extends Component {
               <img src={OneDrop} alt="" />
               Rarely
             </Card>
-            <Card onClick={() => this.setInputOption('regulary')}>
+            <Card onClick={() => this.setInputOption('regularly')}>
               <img src={TwoDrops} alt="" />
-              Regulary
+              Regularly
             </Card>
             <Card onClick={() => this.setInputOption('daily')}>
               <img src={ThreeDrops} alt="" />
