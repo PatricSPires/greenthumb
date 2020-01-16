@@ -28,5 +28,5 @@ TODO:
 - [x] GT-27: save Water preferences into local storage;
 - [x] GT-28: save Pets preferences into local storage;
 - [x] GT-29: create plant component.
-- [] GT-30: change all anchor from button and add a Navlink from react-router-dom.
+- [x] GT-30: change all anchor from button and add a Navlink from react-router-dom.
 - [x] GT-31: create picks page.
