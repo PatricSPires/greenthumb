@@ -17,11 +17,23 @@ export const Button = styled.button.attrs(props => ({
   justify-content: space-evenly;
   align-items: center;
 
+  svg {
+    path {
+      stroke: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
+    }
+  }
+
   &:hover {
     background-color: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
     border: ${props =>
       props.primary ? '1px solid #15573f' : '1px solid #ffffff'};
     color: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+
+    svg {
+      path {
+        stroke: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+      }
+    }
   }
 
   &[disabled] {
