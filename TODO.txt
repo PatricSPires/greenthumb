@@ -30,4 +30,3 @@ TODO:
 - [] GT-29: create plant component.
 - [] GT-30: change all anchor from button and add a Navlink from react-router-dom.
 - [] GT-31: create picks page.
-
