@@ -38,6 +38,7 @@ const Card = styled.button.attrs({
     &:hover {
       background-color: #fd9872;
       color: #ffffff;
+      font-weight: bold;
     }
 
     svg {
