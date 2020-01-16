@@ -7,6 +7,8 @@ import { Button } from '../../components/Button/Button.styled';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 
+import { ReactComponent as ArrowRight } from '../../assets/icons/white/whiteArrow.svg';
+
 export default function Main() {
   return (
     <>
@@ -15,7 +17,7 @@ export default function Main() {
         <Title>Find your next green friend</Title>
         <NavLink to="/sunlight">
           <Button primary>
-            <IoIosArrowRoundForward />
+            <ArrowRight />
             start quizz
           </Button>
         </NavLink>

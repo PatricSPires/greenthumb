@@ -19,8 +19,8 @@ import WateringCan from '../../assets/illustrations/wateringcan.png';
 import OneDrop from '../../assets/icons/green/one-drop.svg';
 import TwoDrops from '../../assets/icons/green/two-drops.svg';
 import ThreeDrops from '../../assets/icons/green/three-drops.svg';
-import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
-import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
+import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
+import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
 class Water extends Component {
   setInputOption = option => {
@@ -58,13 +58,13 @@ class Water extends Component {
           <ButtonGroup>
             <NavLink to="/pets">
               <Button>
-                <img src={GreenArrowRight} alt="Arrow" />
+                <GreenArrowRight />
                 next
               </Button>
             </NavLink>
             <NavLink to="/sunlight">
               <Button>
-                <img src={GreenArrowLeft} alt="" />
+                <GreenArrowLeft />
                 previous
               </Button>
             </NavLink>
