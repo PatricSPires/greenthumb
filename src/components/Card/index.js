@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const Card = styled.div`
+const Card = styled.button.attrs({
+  type: 'button',
+})`
   width: 265px;
   background-color: #ffffff;
   color: #acacac;
@@ -12,9 +14,11 @@ const Card = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 16px 26px;
+  border: none;
 
   img {
     width: 42px;
+    height: 42px;
   }
 
   @media (min-width: 769px) {
@@ -22,13 +26,16 @@ const Card = styled.div`
     flex-direction: column;
     padding: 42px 0;
 
-    &:hover {
+    &:hover,
+    &:focus-within,
+    &:visited {
       background-color: #fd9872;
       color: #ffffff;
     }
 
     img {
       width: 69px;
+      height: 69px;
       margin-bottom: 16px;
     }
   }

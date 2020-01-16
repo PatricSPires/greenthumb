@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
   Title,
@@ -18,52 +18,59 @@ import WateringCan from '../../assets/illustrations/wateringcan.png';
 import OneDrop from '../../assets/icons/green/one-drop.svg';
 import TwoDrops from '../../assets/icons/green/two-drops.svg';
 import ThreeDrops from '../../assets/icons/green/three-drops.svg';
-import WhiteArrow from '../../assets/icons/white/whiteArrow.svg';
-import GreenArrow from '../../assets/icons/green/greenArrow.svg';
+import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
+import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
 
-export default function Water() {
-  return (
-    <>
-      <WaterMark />
-      <GeneralContainer>
-        <LogoContainer>
-          <img src={Logo} alt="greenthumb logo" />
-        </LogoContainer>
-        <SunContainer>
-          <img src={WateringCan} alt="" />
-        </SunContainer>
-        <Title>
-          How often do you want to <strong>water</strong> your plant?
-        </Title>
-        <CardGroup>
-          <Card>
-            <img src={OneDrop} alt="" />
-            High sunlight
-          </Card>
-          <Card>
-            <img src={TwoDrops} alt="" />
-            Low sunlight
-          </Card>
-          <Card>
-            <img src={ThreeDrops} alt="" />
-            No sunlight
-          </Card>
-        </CardGroup>
-        <ButtonGroup>
-          <a href="/pets">
-            <Button primary>
-              <img src={WhiteArrow} alt="Arrow" />
-              next
-            </Button>
-          </a>
-          <a href="/sunlight">
-            <Button>
-              <img src={GreenArrow} alt="" />
-              previous
-            </Button>
-          </a>
-        </ButtonGroup>
-      </GeneralContainer>
-    </>
-  );
+class Water extends Component {
+  setInputOption = option => {
+    localStorage.setItem('water', JSON.stringify(option));
+  };
+
+  render() {
+    return (
+      <>
+        <WaterMark />
+        <GeneralContainer>
+          <LogoContainer>
+            <img src={Logo} alt="greenthumb logo" />
+          </LogoContainer>
+          <SunContainer>
+            <img src={WateringCan} alt="" />
+          </SunContainer>
+          <Title>
+            How often do you want to <strong>water</strong> your plant?
+          </Title>
+          <CardGroup>
+            <Card onClick={() => this.setInputOption('rarely')}>
+              <img src={OneDrop} alt="" />
+              Rarely
+            </Card>
+            <Card onClick={() => this.setInputOption('regulary')}>
+              <img src={TwoDrops} alt="" />
+              Regulary
+            </Card>
+            <Card onClick={() => this.setInputOption('daily')}>
+              <img src={ThreeDrops} alt="" />
+              Daily
+            </Card>
+          </CardGroup>
+          <ButtonGroup>
+            <a href="/pets">
+              <Button>
+                <img src={GreenArrowRight} alt="Arrow" />
+                next
+              </Button>
+            </a>
+            <a href="/sunlight">
+              <Button>
+                <img src={GreenArrowLeft} alt="" />
+                previous
+              </Button>
+            </a>
+          </ButtonGroup>
+        </GeneralContainer>
+      </>
+    );
+  }
 }
+export default Water;
