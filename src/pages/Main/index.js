@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { Title, Container } from './MainStyles';
@@ -12,12 +13,12 @@ export default function Main() {
       <Container>
         <img className="logo" src={Logo} alt="sadasd" />
         <Title>Find your next green friend</Title>
-        <a href="/sunlight">
+        <NavLink to="/sunlight">
           <Button primary>
             <IoIosArrowRoundForward />
             start quizz
           </Button>
-        </a>
+        </NavLink>
       </Container>
     </>
   );
