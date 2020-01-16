@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { IoIosArrowRoundForward } from 'react-icons/io';
 import { Title, Container } from './MainStyles';
 import { Button } from '../../components/Button/Button.styled';
 
