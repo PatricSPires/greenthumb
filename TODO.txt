@@ -5,7 +5,7 @@ TODO:
 - [x] GT-04: create label component.
 - [x] GT-05: create input component.
 - [x] GT-06: create card component.
-- [] GT-07: create a form component.
+- [x] GT-07: create a form component.
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
 - [x] GT-10: create home screen.
