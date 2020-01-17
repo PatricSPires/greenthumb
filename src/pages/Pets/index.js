@@ -12,8 +12,6 @@ import {
 
 import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
-import { GeneralContainer } from '../../components/GeneralContainer';
-import WaterMark from '../../components/WaterMark';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 import Dog from '../../assets/illustrations/dog.png';
@@ -21,6 +19,8 @@ import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
 import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
 import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
+
+import Container from '../../components/Container';
 
 class Pets extends Component {
   setInputOption = option => {
@@ -30,8 +30,7 @@ class Pets extends Component {
   render() {
     return (
       <>
-        <WaterMark />
-        <GeneralContainer>
+        <Container>
           <LogoContainer>
             <img src={Logo} alt="greenthumb logo" />
           </LogoContainer>
@@ -69,7 +68,7 @@ class Pets extends Component {
               </Button>
             </NavLink>
           </ButtonGroup>
-        </GeneralContainer>
+        </Container>
       </>
     );
   }

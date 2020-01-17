@@ -11,8 +11,6 @@ import {
 
 import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
-import { GeneralContainer } from '../../components/GeneralContainer';
-import WaterMark from '../../components/WaterMark';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 import WateringCan from '../../assets/illustrations/wateringcan.png';
@@ -22,6 +20,8 @@ import { ReactComponent as ThreeDrops } from '../../assets/icons/green/three-dro
 import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
+import Container from '../../components/Container';
+
 class Water extends Component {
   setInputOption = option => {
     localStorage.setItem('water', JSON.stringify(option));
@@ -30,8 +30,7 @@ class Water extends Component {
   render() {
     return (
       <>
-        <WaterMark />
-        <GeneralContainer>
+        <Container>
           <LogoContainer>
             <img src={Logo} alt="greenthumb logo" />
           </LogoContainer>
@@ -69,7 +68,7 @@ class Water extends Component {
               </Button>
             </NavLink>
           </ButtonGroup>
-        </GeneralContainer>
+        </Container>
       </>
     );
   }
