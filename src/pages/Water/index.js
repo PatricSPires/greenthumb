@@ -21,6 +21,7 @@ import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/gree
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
 import Container from '../../components/Container';
+import { AskContainer } from '../../components/AskContainer';
 
 class Water extends Component {
   setInputOption = option => {
@@ -31,43 +32,45 @@ class Water extends Component {
     return (
       <>
         <Container>
-          <LogoContainer>
-            <img src={Logo} alt="greenthumb logo" />
-          </LogoContainer>
-          <SunContainer>
-            <img src={WateringCan} alt="" />
-          </SunContainer>
-          <Title>
-            How often do you want to <strong>water</strong> your plant?
-          </Title>
-          <CardGroup>
-            <Card onClick={() => this.setInputOption('rarely')}>
-              <OneDrop />
-              Rarely
-            </Card>
-            <Card onClick={() => this.setInputOption('regularly')}>
-              <TwoDrops />
-              Regularly
-            </Card>
-            <Card onClick={() => this.setInputOption('daily')}>
-              <ThreeDrops />
-              Daily
-            </Card>
-          </CardGroup>
-          <ButtonGroup>
-            <NavLink to="/pets">
-              <Button>
-                <GreenArrowRight />
-                next
-              </Button>
-            </NavLink>
-            <NavLink to="/sunlight">
-              <Button>
-                <GreenArrowLeft />
-                previous
-              </Button>
-            </NavLink>
-          </ButtonGroup>
+          <AskContainer>
+            <LogoContainer>
+              <img src={Logo} alt="greenthumb logo" />
+            </LogoContainer>
+            <SunContainer>
+              <img src={WateringCan} alt="" />
+            </SunContainer>
+            <Title>
+              How often do you want to <strong>water</strong> your plant?
+            </Title>
+            <CardGroup>
+              <Card onClick={() => this.setInputOption('rarely')}>
+                <OneDrop />
+                Rarely
+              </Card>
+              <Card onClick={() => this.setInputOption('regularly')}>
+                <TwoDrops />
+                Regularly
+              </Card>
+              <Card onClick={() => this.setInputOption('daily')}>
+                <ThreeDrops />
+                Daily
+              </Card>
+            </CardGroup>
+            <ButtonGroup>
+              <NavLink to="/pets">
+                <Button>
+                  <GreenArrowRight />
+                  next
+                </Button>
+              </NavLink>
+              <NavLink to="/sunlight">
+                <Button>
+                  <GreenArrowLeft />
+                  previous
+                </Button>
+              </NavLink>
+            </ButtonGroup>
+          </AskContainer>
         </Container>
       </>
     );
