@@ -16,11 +16,11 @@ import WaterMark from '../../components/WaterMark';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 import WateringCan from '../../assets/illustrations/wateringcan.png';
-import OneDrop from '../../assets/icons/green/one-drop.svg';
-import TwoDrops from '../../assets/icons/green/two-drops.svg';
-import ThreeDrops from '../../assets/icons/green/three-drops.svg';
-import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
-import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
+import { ReactComponent as OneDrop } from '../../assets/icons/green/one-drop.svg';
+import { ReactComponent as TwoDrops } from '../../assets/icons/green/two-drops.svg';
+import { ReactComponent as ThreeDrops } from '../../assets/icons/green/three-drops.svg';
+import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
+import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
 class Water extends Component {
   setInputOption = option => {
@@ -43,28 +43,28 @@ class Water extends Component {
           </Title>
           <CardGroup>
             <Card onClick={() => this.setInputOption('rarely')}>
-              <img src={OneDrop} alt="" />
+              <OneDrop />
               Rarely
             </Card>
             <Card onClick={() => this.setInputOption('regularly')}>
-              <img src={TwoDrops} alt="" />
+              <TwoDrops />
               Regularly
             </Card>
             <Card onClick={() => this.setInputOption('daily')}>
-              <img src={ThreeDrops} alt="" />
+              <ThreeDrops />
               Daily
             </Card>
           </CardGroup>
           <ButtonGroup>
             <NavLink to="/pets">
               <Button>
-                <img src={GreenArrowRight} alt="Arrow" />
+                <GreenArrowRight />
                 next
               </Button>
             </NavLink>
             <NavLink to="/sunlight">
               <Button>
-                <img src={GreenArrowLeft} alt="" />
+                <GreenArrowLeft />
                 previous
               </Button>
             </NavLink>

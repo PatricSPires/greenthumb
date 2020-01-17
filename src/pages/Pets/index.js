@@ -17,10 +17,10 @@ import WaterMark from '../../components/WaterMark';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 import Dog from '../../assets/illustrations/dog.png';
-import Pet from '../../assets/icons/coral/pet.svg';
-import NoAnswer from '../../assets/icons/coral/no-answer.svg';
-import GreenArrowRight from '../../assets/icons/green/greenArrowRight.svg';
-import GreenArrowLeft from '../../assets/icons/green/greenArrowLeft.svg';
+import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
+import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
+import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
+import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
 class Pets extends Component {
   setInputOption = option => {
@@ -47,24 +47,24 @@ class Pets extends Component {
           </Subtitle>
           <CardGroup>
             <Card onClick={() => this.setInputOption(true)}>
-              <img src={Pet} alt="" />
+              <Pet />
               Yes
             </Card>
             <Card onClick={() => this.setInputOption(false)}>
-              <img src={NoAnswer} alt="" />
+              <NoAnswer />
               No/They don't care
             </Card>
           </CardGroup>
           <ButtonGroup>
             <NavLink to="/picks">
               <Button>
-                <img src={GreenArrowRight} alt="Arrow" />
+                <GreenArrowRight />
                 finish
               </Button>
             </NavLink>
             <NavLink to="/water">
               <Button>
-                <img src={GreenArrowLeft} alt="" />
+                <GreenArrowLeft />
                 previous
               </Button>
             </NavLink>

@@ -6,7 +6,7 @@ import Sunlight from './pages/Sunlight';
 import Water from './pages/Water';
 import Pets from './pages/Pets';
 import Picks from './pages/Picks';
-import SubmitPick from './pages/SubmitPick';
+import Plant from './pages/Plant';
 
 export default function Routes() {
   return (
@@ -17,7 +17,7 @@ export default function Routes() {
         <Route path="/water" component={Water} />
         <Route path="/pets" component={Pets} />
         <Route path="/picks" component={Picks} />
-        <Route path="/submit-pick" component={SubmitPick} />
+        <Route path="/plant" component={Plant} />
       </Switch>
     </BrowserRouter>
   );

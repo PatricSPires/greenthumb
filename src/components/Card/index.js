@@ -16,9 +16,18 @@ const Card = styled.button.attrs({
   padding: 16px 26px;
   border: none;
 
-  img {
+  svg {
     width: 42px;
     height: 42px;
+  }
+
+  &:hover {
+    svg {
+      path {
+        stroke: #ffffff;
+        fill: #ffffff;
+      }
+    }
   }
 
   @media (min-width: 769px) {
@@ -26,16 +35,15 @@ const Card = styled.button.attrs({
     flex-direction: column;
     padding: 42px 0;
 
-    &:hover,
-    &:focus-within,
-    &:visited {
+    &:hover {
       background-color: #fd9872;
       color: #ffffff;
+      font-weight: bold;
     }
 
-    img {
-      width: 69px;
-      height: 69px;
+    svg {
+      width: 67px;
+      height: 67px;
       margin-bottom: 16px;
     }
   }

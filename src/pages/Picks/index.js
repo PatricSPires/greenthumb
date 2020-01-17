@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Title, LogoContainer, SunContainer } from './styles';
 import Logo from '../../assets/logo/logo-greenthumb.svg';
@@ -54,6 +55,10 @@ class Picks extends Component {
     console.log(this.state.plants);
   };
 
+  saveplant = id => {
+    localStorage.setItem('plant', id);
+  };
+
   render() {
     return (
       <>
@@ -80,9 +85,9 @@ class Picks extends Component {
                       ) : (
                         ''
                       )}
-                      {plant.sun === 'high' ? <img src={highSun} alt="" /> : ''}
-                      {plant.sun === 'low' ? <img src={lowSun} alt="" /> : ''}
-                      {plant.sun === 'no' ? <img src={noSun} alt="" /> : ''}
+                      {plant.sun === 'high' && <img src={highSun} alt="" />}
+                      {plant.sun === 'low' && <img src={lowSun} alt="" />}
+                      {plant.sun === 'no' && <img src={noSun} alt="" />}
 
                       {plant.water === 'rarely' ? (
                         <img src={oneDrop} alt="" />
@@ -101,7 +106,11 @@ class Picks extends Component {
                       )}
                     </PlantAdditionals>
                   </PlantInformations>
-                  <Button>buy now</Button>
+                  <NavLink to="/plant">
+                    <Button onClick={() => this.saveplant(plant.id)}>
+                      buy now
+                    </Button>
+                  </NavLink>
                 </BuyPlant>
               </PlantCard>
             ))}

@@ -2,10 +2,10 @@ TODO:
 - [] GT-01: create an file to all variables like colors, font size and spaces.
 - [x] GT-02: create routing to aplication and pages.
 - [x] GT-03: add font Montserrat light and bold.
-- [] GT-04: create label component.
-- [] GT-05: create input component.
+- [x] GT-04: create label component.
+- [x] GT-05: create input component.
 - [x] GT-06: create card component.
-- [] GT-07: create a form component.
+- [x] GT-07: create a form component.
 - [x] GT-08: create a global style and add a font family.
 - [x] GT-09: add assets to application.
 - [x] GT-10: create home screen.
@@ -18,7 +18,7 @@ TODO:
 - [x] GT-17: fix home screen. (The image and components are not supported in desktop mode).
 - [x] GT-18: add route to button "start quizz".
 - [x] GT-19: Remove hover default from button (the button need to be ghost by default).
-- [] GT-20: add hover to image into cards at Sunlight page.
+- [x] GT-20: add hover to image into cards at Sunlight page.
 - [x] GT-21: adjust cards height into Water page.
 - [] GT-22: the watering can on the water page does not appear to be centralized.
 - [] GT-23: adjust title on the pets page. The "Do" need to be in the next line.
@@ -30,3 +30,6 @@ TODO:
 - [x] GT-29: create plant component.
 - [x] GT-30: change all anchor from button and add a Navlink from react-router-dom.
 - [x] GT-31: create picks page.
+- [x] GT-32: fix buttons svg and hover colors.
+- [x] GT-33: add hover to image into cards at Water page.
+- [x] GT-34: add hover to image into cards at Pets page.
