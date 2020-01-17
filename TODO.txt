@@ -33,3 +33,4 @@ TODO:
 - [x] GT-32: fix buttons svg and hover colors.
 - [x] GT-33: add hover to image into cards at Water page.
 - [x] GT-34: add hover to image into cards at Pets page.
+- [x] GT-35: create a general component with water mark.

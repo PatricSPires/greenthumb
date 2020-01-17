@@ -10,8 +10,6 @@ import {
 
 import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
-import { GeneralContainer } from '../../components/GeneralContainer';
-import WaterMark from '../../components/WaterMark';
 
 import Logo from '../../assets/logo/logo-greenthumb.svg';
 import Sun from '../../assets/illustrations/sun.png';
@@ -21,6 +19,8 @@ import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.s
 import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
 
+import Container from '../../components/Container';
+
 class Sunlight extends Component {
   setInputOption = option => {
     localStorage.setItem('sunlight', JSON.stringify(option));
@@ -29,8 +29,7 @@ class Sunlight extends Component {
   render() {
     return (
       <>
-        <WaterMark />
-        <GeneralContainer>
+        <Container>
           <LogoContainer>
             <img src={Logo} alt="greenthumb logo" />
           </LogoContainer>
@@ -69,7 +68,7 @@ class Sunlight extends Component {
               </Button>
             </NavLink>
           </ButtonGroup>
-        </GeneralContainer>
+        </Container>
       </>
     );
   }
