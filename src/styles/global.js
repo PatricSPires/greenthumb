@@ -20,6 +20,7 @@ export default createGlobalStyle`
     background-color: #F6F6F6;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
+    padding: 1%;
   }
 
   button {
