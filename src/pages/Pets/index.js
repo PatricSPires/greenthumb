@@ -47,11 +47,11 @@ class Pets extends Component {
               for your buddy.
             </Subtitle>
             <CardGroup>
-              <Card onClick={() => this.setInputOption(true)}>
+              <Card primary onClick={() => this.setInputOption(true)}>
                 <Pet />
                 Yes
               </Card>
-              <Card onClick={() => this.setInputOption(false)}>
+              <Card primary onClick={() => this.setInputOption(false)}>
                 <NoAnswer />
                 No/They don't care
               </Card>

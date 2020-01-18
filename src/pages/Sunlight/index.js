@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Title, SunContainer, CardGroup, ButtonGroup } from './styles';
 
-import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
 
 import Sun from '../../assets/illustrations/sun.png';
@@ -16,6 +15,7 @@ import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import Card from '../../components/Card';
 
 class Sunlight extends Component {
   setInputOption = option => {
@@ -38,15 +38,15 @@ class Sunlight extends Component {
               get.
             </Title>
             <CardGroup>
-              <Card onClick={() => this.setInputOption('high')}>
+              <Card primary onClick={() => this.setInputOption('high')}>
                 <HighSun />
                 High sunlight
               </Card>
-              <Card onClick={() => this.setInputOption('low')}>
+              <Card primary onClick={() => this.setInputOption('low')}>
                 <LowhSun />
                 Low sunlight
               </Card>
-              <Card onClick={() => this.setInputOption('no')}>
+              <Card primary onClick={() => this.setInputOption('no')}>
                 <NoAnswer />
                 No sunlight
               </Card>
