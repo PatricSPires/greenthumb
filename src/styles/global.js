@@ -17,7 +17,7 @@ export default createGlobalStyle`
   }
 
   body{
-    background-color: #F6F6F6;
+    background-color: #ffffff;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
   }
