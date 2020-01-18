@@ -21,24 +21,23 @@ export const CardComponent = styled.button.attrs(props => ({
     height: 42px;
   }
 
-  &:hover {
-    svg {
-      path {
-        stroke: #ffffff;
-        fill: #ffffff;
-      }
-    }
-  }
-
   @media (min-width: 769px) {
     width: 215px;
     flex-direction: column;
     padding: 42px 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: ${props => (props.primary ? '#FD9872' : '#7baf9e')};
       color: #ffffff;
       font-weight: bold;
+
+      svg {
+        path {
+          stroke: #ffffff;
+          fill: #ffffff;
+        }
+      }
     }
 
     svg {
