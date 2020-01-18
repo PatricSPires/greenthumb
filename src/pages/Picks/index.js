@@ -6,6 +6,7 @@ import Logo from '../../assets/logo/logo-greenthumb.svg';
 import HandPick from '../../assets/illustrations/pick.png';
 import WaterMark from '../../components/WaterMark';
 import { Button } from '../../components/Button/Button.styled';
+import { GeneralContainer } from '../../components/GeneralContainer';
 
 // Icons
 import toxic from '../../assets/icons/grey/toxic.svg';
@@ -17,7 +18,6 @@ import twoDrops from '../../assets/icons/grey/twoDrops.svg';
 import threeDrops from '../../assets/icons/grey/threeDrops.svg';
 
 import {
-  Container,
   PlantContainer,
   PlantCard,
   PlantTitle,
@@ -63,7 +63,7 @@ class Picks extends Component {
     return (
       <>
         <WaterMark />
-        <Container>
+        <GeneralContainer>
           <LogoContainer>
             <img src={Logo} alt="greenthumb logo" />
           </LogoContainer>
@@ -115,7 +115,7 @@ class Picks extends Component {
               </PlantCard>
             ))}
           </PlantContainer>
-        </Container>
+        </GeneralContainer>
       </>
     );
   }

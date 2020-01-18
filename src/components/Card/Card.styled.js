@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Card = styled.button.attrs({
+export const Card = styled.button.attrs({
   type: 'button',
 })`
   width: 265px;
@@ -15,12 +15,10 @@ const Card = styled.button.attrs({
   align-items: center;
   padding: 16px 26px;
   border: none;
-
   svg {
     width: 42px;
     height: 42px;
   }
-
   &:hover {
     svg {
       path {
@@ -29,18 +27,15 @@ const Card = styled.button.attrs({
       }
     }
   }
-
   @media (min-width: 769px) {
     width: 215px;
     flex-direction: column;
     padding: 42px 0;
-
     &:hover {
       background-color: #fd9872;
       color: #ffffff;
       font-weight: bold;
     }
-
     svg {
       width: 67px;
       height: 67px;
@@ -48,5 +43,3 @@ const Card = styled.button.attrs({
     }
   }
 `;
-
-export default Card;

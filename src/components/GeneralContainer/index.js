@@ -9,6 +9,6 @@ export const GeneralContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    padding-top: 6%;
   }
 `;
