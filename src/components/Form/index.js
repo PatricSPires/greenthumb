@@ -19,14 +19,14 @@ export default class Form extends Component {
       <FormComponent>
         <h1>Nice pick!</h1>
         <p>
-          Tell us your name and e-mail and we will get in touch regarding your
-          order ;)
+          Tell us your name and e-mail and we will get in touch about your order
+          ;)
         </p>
         <Label text="Name" labelFor="name" />
         <Input placeholder="Crazy Plant Person" type="text" />
         <Label text="E-mail" />
         <Input placeholder="plantperson@email.com" type="email" />
-        <Button>send</Button>
+        <Button type="button">send</Button>
       </FormComponent>
     );
   }

@@ -18,6 +18,7 @@ import Form from '../../components/Form';
 import Container from '../../components/Container';
 import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled';
 import PlantInformation from '../../components/PlantInformation';
+import { Informations } from './styles';
 
 export default class Plant extends Component {
   constructor() {
@@ -47,7 +48,7 @@ export default class Plant extends Component {
               src={this.state.plant.url}
               alt={`This plant is: ${this.state.plant.name}`}
             />
-            <div>
+            <Informations>
               {this.state.plant.sun === 'high' ? (
                 <PlantInformation>
                   <HighSun />
@@ -101,7 +102,7 @@ export default class Plant extends Component {
               {this.state.plant.toxicity ? (
                 <PlantInformation>
                   <Toxic />
-                  <strong>Beware!</strong> Toxic for pets
+                  <strong>Beware!</strong> &nbsp;Toxic for pets
                 </PlantInformation>
               ) : (
                 <PlantInformation>
@@ -109,7 +110,7 @@ export default class Plant extends Component {
                   Non-toxic for pets
                 </PlantInformation>
               )}
-            </div>
+            </Informations>
           </Purchase>
           <Form />
         </BuyContainer>

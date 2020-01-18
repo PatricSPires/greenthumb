@@ -13,6 +13,10 @@ export const Purchase = styled.div`
     color: #0c261c;
   }
 
+  img {
+    margin-bottom: 30px;
+  }
+
   p {
     font-size: 16px;
     font-weight: 300;
