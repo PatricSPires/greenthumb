@@ -35,3 +35,4 @@ TODO:
 - [x] GT-34: add hover to image into cards at Pets page.
 - [x] GT-35: create a general component with water mark.
 - [x] GT-36: create a ask container and add into pages.
+- [x] GT-37: create a Logo component.
