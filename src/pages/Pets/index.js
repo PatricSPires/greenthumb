@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import {
   Title,
   Subtitle,
-  LogoContainer,
   SunContainer,
   CardGroup,
   ButtonGroup,
@@ -13,7 +12,6 @@ import {
 import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
 
-import Logo from '../../assets/logo/logo-greenthumb.svg';
 import Dog from '../../assets/illustrations/dog.png';
 import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
 import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
@@ -22,6 +20,8 @@ import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/green
 
 import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
+import Header from '../../components/Header';
+import Logo from '../../components/Logo';
 
 class Pets extends Component {
   setInputOption = option => {
@@ -33,9 +33,9 @@ class Pets extends Component {
       <>
         <Container>
           <AskContainer>
-            <LogoContainer>
-              <img src={Logo} alt="greenthumb logo" />
-            </LogoContainer>
+            <Header>
+              <Logo />
+            </Header>
             <SunContainer>
               <img src={Dog} alt="" />
             </SunContainer>

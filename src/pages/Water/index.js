@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import {
-  Title,
-  LogoContainer,
-  SunContainer,
-  CardGroup,
-  ButtonGroup,
-} from './styles';
+import { Title, SunContainer, CardGroup, ButtonGroup } from './styles';
 
 import Card from '../../components/Card';
 import { Button } from '../../components/Button/Button.styled';
 
-import Logo from '../../assets/logo/logo-greenthumb.svg';
 import WateringCan from '../../assets/illustrations/wateringcan.png';
 import { ReactComponent as OneDrop } from '../../assets/icons/green/one-drop.svg';
 import { ReactComponent as TwoDrops } from '../../assets/icons/green/two-drops.svg';
@@ -22,6 +15,8 @@ import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/green
 
 import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
+import Header from '../../components/Header';
+import Logo from '../../components/Logo';
 
 class Water extends Component {
   setInputOption = option => {
@@ -33,9 +28,9 @@ class Water extends Component {
       <>
         <Container>
           <AskContainer>
-            <LogoContainer>
-              <img src={Logo} alt="greenthumb logo" />
-            </LogoContainer>
+            <Header>
+              <Logo />
+            </Header>
             <SunContainer>
               <img src={WateringCan} alt="" />
             </SunContainer>

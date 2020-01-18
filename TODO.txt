@@ -36,3 +36,4 @@ TODO:
 - [x] GT-35: create a general component with water mark.
 - [x] GT-36: create a ask container and add into pages.
 - [x] GT-37: create a Logo component.
+- [x] GT-38: create a header component.
