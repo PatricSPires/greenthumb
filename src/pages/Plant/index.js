@@ -4,18 +4,20 @@ import api from '../../services/api';
 import { Purchase } from '../../components/Purchase';
 import Price from '../../components/Price';
 
-import toxic from '../../assets/icons/grey/toxic.svg';
-import highSun from '../../assets/icons/grey/highSun.svg';
-import lowSun from '../../assets/icons/grey/lowSun.svg';
-import noSun from '../../assets/icons/grey/noSun.svg';
-import oneDrop from '../../assets/icons/grey/oneDrop.svg';
-import twoDrops from '../../assets/icons/grey/twoDrops.svg';
-import threeDrops from '../../assets/icons/grey/threeDrops.svg';
+import { ReactComponent as Toxic } from '../../assets/icons/grey/toxic.svg';
+import { ReactComponent as Pet } from '../../assets/icons/grey/pet.svg';
+import { ReactComponent as HighSun } from '../../assets/icons/grey/highSun.svg';
+import { ReactComponent as LowSun } from '../../assets/icons/grey/lowSun.svg';
+import { ReactComponent as NoSun } from '../../assets/icons/grey/noSun.svg';
+import { ReactComponent as OneDrop } from '../../assets/icons/grey/oneDrop.svg';
+import { ReactComponent as TwoDrops } from '../../assets/icons/grey/twoDrops.svg';
+import { ReactComponent as ThreeDrops } from '../../assets/icons/grey/threeDrops.svg';
 
 import Form from '../../components/Form';
 
 import Container from '../../components/Container';
 import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled';
+import PlantInformation from '../../components/PlantInformation';
 
 export default class Plant extends Component {
   constructor() {
@@ -46,30 +48,66 @@ export default class Plant extends Component {
               alt={`This plant is: ${this.state.plant.name}`}
             />
             <div>
-              {this.state.plant.sun === 'high' && <img src={highSun} alt="" />}
-              {this.state.plant.sun === 'low' && <img src={lowSun} alt="" />}
-              {this.state.plant.sun === 'no' && <img src={noSun} alt="" />}
+              {this.state.plant.sun === 'high' ? (
+                <PlantInformation>
+                  <HighSun />
+                  High Sunight
+                </PlantInformation>
+              ) : (
+                ''
+              )}
+              {this.state.plant.sun === 'low' ? (
+                <PlantInformation>
+                  <LowSun />
+                  Low Sunight
+                </PlantInformation>
+              ) : (
+                ''
+              )}
+              {this.state.plant.sun === 'no' ? (
+                <PlantInformation>
+                  <NoSun />
+                  No Sunight
+                </PlantInformation>
+              ) : (
+                ''
+              )}
 
               {this.state.plant.water === 'rarely' ? (
-                <img src={oneDrop} alt="" />
+                <PlantInformation>
+                  <OneDrop />
+                  Water Rarely
+                </PlantInformation>
               ) : (
                 ''
               )}
               {this.state.plant.water === 'regularly' ? (
-                <img src={twoDrops} alt="" />
+                <PlantInformation>
+                  <TwoDrops />
+                  Water Regulary
+                </PlantInformation>
               ) : (
                 ''
               )}
               {this.state.plant.water === 'daily' ? (
-                <img src={threeDrops} alt="" />
+                <PlantInformation>
+                  <ThreeDrops />
+                  Water Daily
+                </PlantInformation>
               ) : (
                 ''
               )}
 
               {this.state.plant.toxicity ? (
-                <img src={toxic} alt="This plant is toxic" />
+                <PlantInformation>
+                  <Toxic />
+                  <strong>Beware!</strong> Toxic for pets
+                </PlantInformation>
               ) : (
-                ''
+                <PlantInformation>
+                  <Pet />
+                  Non-toxic for pets
+                </PlantInformation>
               )}
             </div>
           </Purchase>
