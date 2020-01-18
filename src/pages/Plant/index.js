@@ -19,6 +19,7 @@ import Container from '../../components/Container';
 import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled';
 import PlantInformation from '../../components/PlantInformation';
 import { Informations } from './styles';
+import Logo from '../../components/Logo';
 
 export default class Plant extends Component {
   constructor() {
@@ -40,6 +41,7 @@ export default class Plant extends Component {
   render() {
     return (
       <Container>
+        <Logo />
         <BuyContainer>
           <Purchase>
             <h1>{this.state.plant.name}</h1>
