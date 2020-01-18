@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const CardComponent = styled.button.attrs(props => ({
+export const Card = styled.button.attrs({
   type: 'button',
-}))`
+})`
   width: 265px;
   background-color: #ffffff;
   color: #acacac;
@@ -15,31 +15,27 @@ export const CardComponent = styled.button.attrs(props => ({
   align-items: center;
   padding: 16px 26px;
   border: none;
-
   svg {
     width: 42px;
     height: 42px;
   }
-
+  &:hover {
+    svg {
+      path {
+        stroke: #ffffff;
+        fill: #ffffff;
+      }
+    }
+  }
   @media (min-width: 769px) {
     width: 215px;
     flex-direction: column;
     padding: 42px 0;
-
-    &:hover,
-    &:focus {
-      background-color: ${props => (props.primary ? '#FD9872' : '#7baf9e')};
+    &:hover {
+      background-color: #fd9872;
       color: #ffffff;
       font-weight: bold;
-
-      svg {
-        path {
-          stroke: #ffffff;
-          fill: #ffffff;
-        }
-      }
     }
-
     svg {
       width: 67px;
       height: 67px;

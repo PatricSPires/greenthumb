@@ -9,7 +9,7 @@ import {
   ButtonGroup,
 } from './styles';
 
-import Card from '../../components/Card';
+import { Card } from '../../components/Card/Card.styled';
 import { Button } from '../../components/Button/Button.styled';
 
 import Dog from '../../assets/illustrations/dog.png';

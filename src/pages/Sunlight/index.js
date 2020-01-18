@@ -15,7 +15,7 @@ import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
-import Card from '../../components/Card';
+import { Card } from '../../components/Card/Card.styled';
 
 class Sunlight extends Component {
   setInputOption = option => {

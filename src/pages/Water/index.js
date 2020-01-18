@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { Title, SunContainer, CardGroup, ButtonGroup } from './styles';
 
-import Card from '../../components/Card';
+import { Card } from '../../components/Card/Card.styled';
 import { Button } from '../../components/Button/Button.styled';
 
 import WateringCan from '../../assets/illustrations/wateringcan.png';
