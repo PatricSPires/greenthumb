@@ -38,3 +38,4 @@ TODO:
 - [x] GT-37: create a Logo component.
 - [x] GT-38: create a header component.
 - [x] GT-39: refactor card component.
+- [] GT-40: refactor a form component and add the MailSent screen.
