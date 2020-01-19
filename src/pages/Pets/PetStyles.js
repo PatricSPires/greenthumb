@@ -38,7 +38,7 @@ export const Subtitle = styled.h2`
   }
 `;
 
-export const SunContainer = styled.div`
+export const IllustrationContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;

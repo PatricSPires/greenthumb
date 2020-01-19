@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Title, SunContainer } from './PicksStyles';
+import { Title, IllustrationContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
 import { Button } from '../../components/Button/Button.styled';
 
@@ -68,9 +68,9 @@ class Picks extends Component {
           <PicksContainer>
             <Header>
               <Logo />
-              <SunContainer>
+              <IllustrationContainer>
                 <img src={HandPick} alt="Handle picking a plant" />
-              </SunContainer>
+              </IllustrationContainer>
               <Title>Our picks for you</Title>
             </Header>
             <PlantContainer>

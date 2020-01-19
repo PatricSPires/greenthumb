@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import {
   Title,
   Subtitle,
-  SunContainer,
+  IllustrationContainer,
   CardGroup,
   ButtonGroup,
 } from './PetStyles';
@@ -36,9 +36,9 @@ class Pets extends Component {
             <Header>
               <Logo />
             </Header>
-            <SunContainer>
+            <IllustrationContainer>
               <img src={Dog} alt="" />
-            </SunContainer>
+            </IllustrationContainer>
             <Title>
               Do you have pets? Do they <strong>chew</strong> plants?
             </Title>

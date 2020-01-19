@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Title, SunContainer, CardGroup, ButtonGroup } from './SunlightStyles';
+import {
+  Title,
+  IllustrationContainer,
+  CardGroup,
+  ButtonGroup,
+} from './SunlightStyles';
 
 import { Button } from '../../components/Button/Button.styled';
 
@@ -29,9 +34,9 @@ class Sunlight extends Component {
           <AskContainer>
             <Header>
               <Logo />
-              <SunContainer>
+              <IllustrationContainer>
                 <img src={Sun} alt="" />
-              </SunContainer>
+              </IllustrationContainer>
             </Header>
             <Title>
               First, set the amount of <strong>sunlight</strong> your plant will
