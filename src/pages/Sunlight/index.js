@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Title, SunContainer, CardGroup, ButtonGroup } from './styles';
+import { Title, SunContainer, CardGroup, ButtonGroup } from './SunlightStyles';
 
 import { Button } from '../../components/Button/Button.styled';
 

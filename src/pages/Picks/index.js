@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Title, SunContainer } from './styles';
+import { Title, SunContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
 import { Button } from '../../components/Button/Button.styled';
 

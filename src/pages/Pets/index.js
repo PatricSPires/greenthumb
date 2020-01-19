@@ -7,7 +7,7 @@ import {
   SunContainer,
   CardGroup,
   ButtonGroup,
-} from './styles';
+} from './PetStyles';
 
 import { Card } from '../../components/Card/Card.styled';
 import { Button } from '../../components/Button/Button.styled';
