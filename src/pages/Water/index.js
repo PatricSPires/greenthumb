@@ -43,15 +43,15 @@ class Water extends Component {
               How often do you want to <strong>water</strong> your plant?
             </Title>
             <CardGroup>
-              <Card onClick={() => this.setInputOption('rarely')}>
+              <Card primary onClick={() => this.setInputOption('rarely')}>
                 <OneDrop />
                 Rarely
               </Card>
-              <Card onClick={() => this.setInputOption('regularly')}>
+              <Card primary onClick={() => this.setInputOption('regularly')}>
                 <TwoDrops />
                 Regularly
               </Card>
-              <Card onClick={() => this.setInputOption('daily')}>
+              <Card primary onClick={() => this.setInputOption('daily')}>
                 <ThreeDrops />
                 Daily
               </Card>
