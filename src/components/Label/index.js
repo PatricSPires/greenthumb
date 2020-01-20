@@ -2,10 +2,10 @@ import React from 'react';
 
 import { LabelComponent } from './Label.styled';
 
-export default function Label({ text, labelFor }) {
+export default function Label({ text, htmlFor }) {
   return (
     <div>
-      <LabelComponent hrtmlFor={labelFor}>{text}</LabelComponent>
+      <LabelComponent hrtmlFor={htmlFor}>{text}</LabelComponent>
     </div>
   );
 }

@@ -1,50 +1,79 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Field } from 'formik';
+
+export const Input = styled(Field)`
+  background-color: #ffffff;
+  max-width: 297px;
+  border-radius: 19px;
+  font-size: 14px;
+  color: #d0d0d0;
+  border: none;
+  padding: 6px 75px 6px 25px;
+  margin-bottom: 22px;
+
+  ${({ error }) =>
+    error &&
+    css`
+      border: 1px solid #f71d1d;
+      outline: none;
+    `}
+`;
 
 export const FormContainer = styled.div`
   background-color: #f6f6f6;
+  padding: 28px 10px;
 
-  @media (min-width: 1024px) {
-    max-width: 381px;
-    width: 100%;
-  }
-`;
-
-export const FormComponent = styled.form`
-  padding: 30px 10px;
   h1 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #0c261c;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    padding-left: 18px;
   }
 
   p {
-    font-size: 16px;
+    font-style: normal;
     font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
     color: #6e6e6e;
-    line-height: 27px;
+    max-width: 260px;
     margin-bottom: 30px;
-    max-width: 282px;
+    padding-left: 18px;
   }
 
   button {
-    margin-top: 30px;
+    width: 100%;
     background-color: transparent;
   }
 
   @media (min-width: 1024px) {
-    padding: 42px 50px;
+    padding: 40px 48px;
+    max-width: 381px;
+    width: 100%;
+
     h1 {
-      font-size: 40px;
-      font-weight: bold;
-      color: #0c261c;
       margin-bottom: 16px;
     }
 
     p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
       line-height: 29px;
+      color: #6e6e6e;
+      max-width: 244px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin: 0 0 0 auto;
+      background-color: transparent;
     }
   }
+`;
+
+export const Error = styled.div`
+  color: #f71d1d;
+  font-weight: 300;
+  font-size: 12px;
 `;
 
 export const EmailSent = styled.div`
