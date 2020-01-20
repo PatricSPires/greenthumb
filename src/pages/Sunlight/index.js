@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {
   Title,
@@ -27,6 +28,15 @@ class Sunlight extends Component {
     localStorage.setItem('sunlight', JSON.stringify(option));
   };
 
+  handleAddPreference(preference) {
+    const { dispatch } = this.props;
+
+    dispatch({
+      type: 'ADD_SUNLIGHT',
+      preference,
+    });
+  }
+
   render() {
     return (
       <>
@@ -43,15 +53,15 @@ class Sunlight extends Component {
               get.
             </Title>
             <CardGroup>
-              <Card primary onClick={() => this.setInputOption('high')}>
+              <Card primary onClick={() => this.handleAddPreference('high')}>
                 <HighSun />
                 High sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('low')}>
+              <Card primary onClick={() => this.handleAddPreference('low')}>
                 <LowhSun />
                 Low sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('no')}>
+              <Card primary onClick={() => this.handleAddPreference('no')}>
                 <NoAnswer />
                 No sunlight
               </Card>
@@ -77,4 +87,4 @@ class Sunlight extends Component {
   }
 }
 
-export default Sunlight;
+export default connect()(Sunlight);

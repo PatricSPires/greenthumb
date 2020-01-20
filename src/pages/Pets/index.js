@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -28,6 +29,15 @@ class Pets extends Component {
     localStorage.setItem('pets', JSON.stringify(option));
   };
 
+  handleAddPreference(preference) {
+    const { dispatch } = this.props;
+
+    dispatch({
+      type: 'ADD_PET',
+      preference,
+    });
+  }
+
   render() {
     return (
       <>
@@ -47,11 +57,11 @@ class Pets extends Component {
               for your buddy.
             </Subtitle>
             <CardGroup>
-              <Card primary onClick={() => this.setInputOption(true)}>
+              <Card primary onClick={() => this.handleAddPreference(true)}>
                 <Pet />
                 Yes
               </Card>
-              <Card primary onClick={() => this.setInputOption(false)}>
+              <Card primary onClick={() => this.handleAddPreference(false)}>
                 <NoAnswer />
                 No/They don't care
               </Card>
@@ -77,4 +87,4 @@ class Pets extends Component {
   }
 }
 
-export default Pets;
+export default connect()(Pets);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -28,6 +29,15 @@ class Water extends Component {
     localStorage.setItem('water', JSON.stringify(option));
   };
 
+  handleAddPreference(preference) {
+    const { dispatch } = this.props;
+
+    dispatch({
+      type: 'ADD_WATER',
+      preference,
+    });
+  }
+
   render() {
     return (
       <>
@@ -43,15 +53,15 @@ class Water extends Component {
               How often do you want to <strong>water</strong> your plant?
             </Title>
             <CardGroup>
-              <Card onClick={() => this.setInputOption('rarely')}>
+              <Card onClick={() => this.handleAddPreference('rarely')}>
                 <OneDrop />
                 Rarely
               </Card>
-              <Card onClick={() => this.setInputOption('regularly')}>
+              <Card onClick={() => this.handleAddPreference('regularly')}>
                 <TwoDrops />
                 Regularly
               </Card>
-              <Card onClick={() => this.setInputOption('daily')}>
+              <Card onClick={() => this.handleAddPreference('daily')}>
                 <ThreeDrops />
                 Daily
               </Card>
@@ -76,4 +86,4 @@ class Water extends Component {
     );
   }
 }
-export default Water;
+export default connect()(Water);
