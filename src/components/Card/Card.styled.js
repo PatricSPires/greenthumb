@@ -36,7 +36,7 @@ export const Card = styled.button.attrs({
     padding: 42px 0;
 
     &:hover {
-      background-color: ${props => (props.primary ? '#7BAF9E' : '#fd9872')};
+      background-color: ${props => (props.primary ? '#fd9872' : '#7BAF9E')};
       color: #ffffff;
       font-weight: bold;
     }
