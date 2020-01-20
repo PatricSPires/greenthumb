@@ -1,5 +1,5 @@
 TODO:
-- [] GT-01: create an file to all variables like colors, font size and spaces.
+- [x] GT-01: create an file to all variables like colors, font size and spaces.
 - [x] GT-02: create routing to aplication and pages.
 - [x] GT-03: add font Montserrat light and bold.
 - [x] GT-04: create label component.
@@ -38,3 +38,4 @@ TODO:
 - [x] GT-37: create a Logo component.
 - [x] GT-38: create a header component.
 - [x] GT-39: refactor card component.
+- [x] GT-41: refactor a form component and add the MailSent screen.

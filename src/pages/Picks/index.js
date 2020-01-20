@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Title, LogoContainer, SunContainer } from './styles';
-import Logo from '../../assets/logo/logo-greenthumb.svg';
+import { Title, IllustrationContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
-import WaterMark from '../../components/WaterMark';
 import { Button } from '../../components/Button/Button.styled';
-import { GeneralContainer } from '../../components/GeneralContainer';
 
 // Icons
 import toxic from '../../assets/icons/grey/toxic.svg';
@@ -16,6 +13,11 @@ import noSun from '../../assets/icons/grey/noSun.svg';
 import oneDrop from '../../assets/icons/grey/oneDrop.svg';
 import twoDrops from '../../assets/icons/grey/twoDrops.svg';
 import threeDrops from '../../assets/icons/grey/threeDrops.svg';
+
+import Container from '../../components/Container';
+import { PicksContainer } from '../../components/PicksContainer/PicksContainer.styled';
+import Header from '../../components/Header';
+import Logo from '../../components/Logo';
 
 import {
   PlantContainer,
@@ -62,60 +64,61 @@ class Picks extends Component {
   render() {
     return (
       <>
-        <WaterMark />
-        <GeneralContainer>
-          <LogoContainer>
-            <img src={Logo} alt="greenthumb logo" />
-          </LogoContainer>
-          <SunContainer>
-            <img src={HandPick} alt="Handle picking a plant" />
-          </SunContainer>
-          <Title>Our picks for you</Title>
-          <PlantContainer>
-            {this.state.plants.map(plant => (
-              <PlantCard key={plant.id}>
-                <img src={plant.url} alt={`Plant ${plant.name}`} />
-                <BuyPlant>
-                  <PlantTitle>{plant.name}</PlantTitle>
-                  <PlantInformations>
-                    <PlantPrice>${plant.price}</PlantPrice>
-                    <PlantAdditionals>
-                      {plant.toxicity ? (
-                        <img src={toxic} alt="This plant is toxic" />
-                      ) : (
-                        ''
-                      )}
-                      {plant.sun === 'high' && <img src={highSun} alt="" />}
-                      {plant.sun === 'low' && <img src={lowSun} alt="" />}
-                      {plant.sun === 'no' && <img src={noSun} alt="" />}
+        <Container>
+          <PicksContainer>
+            <Header>
+              <Logo />
+              <IllustrationContainer>
+                <img src={HandPick} alt="Handle picking a plant" />
+              </IllustrationContainer>
+              <Title>Our picks for you</Title>
+            </Header>
+            <PlantContainer>
+              {this.state.plants.map(plant => (
+                <PlantCard key={plant.id}>
+                  <img src={plant.url} alt={`Plant ${plant.name}`} />
+                  <BuyPlant>
+                    <PlantTitle>{plant.name}</PlantTitle>
+                    <PlantInformations>
+                      <PlantPrice>${plant.price}</PlantPrice>
+                      <PlantAdditionals>
+                        {plant.toxicity ? (
+                          <img src={toxic} alt="This plant is toxic" />
+                        ) : (
+                          ''
+                        )}
+                        {plant.sun === 'high' && <img src={highSun} alt="" />}
+                        {plant.sun === 'low' && <img src={lowSun} alt="" />}
+                        {plant.sun === 'no' && <img src={noSun} alt="" />}
 
-                      {plant.water === 'rarely' ? (
-                        <img src={oneDrop} alt="" />
-                      ) : (
-                        ''
-                      )}
-                      {plant.water === 'regularly' ? (
-                        <img src={twoDrops} alt="" />
-                      ) : (
-                        ''
-                      )}
-                      {plant.water === 'daily' ? (
-                        <img src={threeDrops} alt="" />
-                      ) : (
-                        ''
-                      )}
-                    </PlantAdditionals>
-                  </PlantInformations>
-                  <NavLink to="/plant">
-                    <Button onClick={() => this.saveplant(plant.id)}>
-                      buy now
-                    </Button>
-                  </NavLink>
-                </BuyPlant>
-              </PlantCard>
-            ))}
-          </PlantContainer>
-        </GeneralContainer>
+                        {plant.water === 'rarely' ? (
+                          <img src={oneDrop} alt="" />
+                        ) : (
+                          ''
+                        )}
+                        {plant.water === 'regularly' ? (
+                          <img src={twoDrops} alt="" />
+                        ) : (
+                          ''
+                        )}
+                        {plant.water === 'daily' ? (
+                          <img src={threeDrops} alt="" />
+                        ) : (
+                          ''
+                        )}
+                      </PlantAdditionals>
+                    </PlantInformations>
+                    <NavLink to="/plant">
+                      <Button onClick={() => this.saveplant(plant.id)}>
+                        buy now
+                      </Button>
+                    </NavLink>
+                  </BuyPlant>
+                </PlantCard>
+              ))}
+            </PlantContainer>
+          </PicksContainer>
+        </Container>
       </>
     );
   }

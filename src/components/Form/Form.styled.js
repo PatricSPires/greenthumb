@@ -1,24 +1,107 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Field } from 'formik';
 
-export const FormComponent = styled.form`
-  max-width: 381px;
-  width: 100%;
+export const Input = styled(Field)`
+  background-color: #ffffff;
+  max-width: 297px;
+  border-radius: 19px;
+  font-size: 14px;
+  color: #d0d0d0;
+  border: none;
+  padding: 6px 75px 6px 25px;
+  margin-bottom: 22px;
+
+  ${({ error }) =>
+    error &&
+    css`
+      border: 1px solid #f71d1d;
+      outline: none;
+    `}
+`;
+
+export const FormContainer = styled.div`
   background-color: #f6f6f6;
+  padding: 28px 10px;
 
   h1 {
-    font-size: 40px;
-    font-weight: bold;
+    margin-bottom: 18px;
+    padding-left: 18px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
+    color: #6e6e6e;
+    max-width: 260px;
+    margin-bottom: 30px;
+    padding-left: 18px;
+  }
+
+  button {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 40px 48px;
+    max-width: 381px;
+    width: 100%;
+
+    h1 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 29px;
+      color: #6e6e6e;
+      max-width: 244px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin: 0 0 0 auto;
+      background-color: transparent;
+    }
+  }
+`;
+
+export const Error = styled.div`
+  color: #f71d1d;
+  font-weight: 300;
+  font-size: 12px;
+`;
+
+export const EmailSent = styled.div`
+  position: absolute;
+  top: 138px;
+  background-color: #f6f6f6;
+  width: 381px;
+  height: 504px;
+  padding: 46px 80px;
+  display: none;
+
+  h1 {
+    font-size: 35px;
     color: #0c261c;
+    text-align: center;
     margin-bottom: 16px;
   }
 
   p {
     font-size: 16px;
-    font-weight: 300;
-    line-height: 29px;
-    max-width: 244px;
-    width: 100%;
-    margin-bottom: 30px;
+    line-height: 27px;
     color: #6e6e6e;
+    text-align: center;
+    max-width: 265px;
+    margin: 0 auto 36px;
+  }
+
+  img {
+    margin: 0 auto;
   }
 `;

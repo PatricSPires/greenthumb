@@ -8,6 +8,7 @@ export const HeaderComponent = styled.header`
 
   @media (min-width: 1024px) {
     padding-top: 96px;
+    margin: 0 auto;
   }
 `;
 

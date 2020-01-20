@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Title, SunContainer, CardGroup, ButtonGroup } from './styles';
+import {
+  Title,
+  IllustrationContainer,
+  CardGroup,
+  ButtonGroup,
+} from './WaterStyles';
 
 import { Card } from '../../components/Card/Card.styled';
 import { Button } from '../../components/Button/Button.styled';
@@ -31,9 +36,9 @@ class Water extends Component {
             <Header>
               <Logo />
             </Header>
-            <SunContainer>
+            <IllustrationContainer>
               <img src={WateringCan} alt="" />
-            </SunContainer>
+            </IllustrationContainer>
             <Title>
               How often do you want to <strong>water</strong> your plant?
             </Title>
