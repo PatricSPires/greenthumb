@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -23,6 +24,7 @@ import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 class Water extends Component {
   setInputOption = option => {
@@ -30,12 +32,8 @@ class Water extends Component {
   };
 
   handleAddPreference(preference) {
-    const { dispatch } = this.props;
-
-    dispatch({
-      type: 'ADD_WATER',
-      preference,
-    });
+    const { addWater } = this.props;
+    addWater(preference);
   }
 
   render() {
@@ -86,4 +84,8 @@ class Water extends Component {
     );
   }
 }
-export default connect()(Water);
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Water);

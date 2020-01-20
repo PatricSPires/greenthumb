@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 import {
   Title,
@@ -23,18 +24,16 @@ import Header from '../../components/Header';
 import Logo from '../../components/Logo';
 import { Card } from '../../components/Card/Card.styled';
 
+import * as PreferenceActions from '../../store/modules/preferences/actions';
+
 class Sunlight extends Component {
   setInputOption = option => {
     localStorage.setItem('sunlight', JSON.stringify(option));
   };
 
   handleAddPreference(preference) {
-    const { dispatch } = this.props;
-
-    dispatch({
-      type: 'ADD_SUNLIGHT',
-      preference,
-    });
+    const { addSunlight } = this.props;
+    addSunlight(preference);
   }
 
   render() {
@@ -87,4 +86,7 @@ class Sunlight extends Component {
   }
 }
 
-export default connect()(Sunlight);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Sunlight);
