@@ -8,6 +8,9 @@ export const colors = {
   bg_light: 'rgba(0, 0, 0, 0.0758577)',
   bg_dark: 'rgba(0, 0, 0, 0.25)',
   white: '#ffffff',
+  silver_chalice: '#acacac',
+  atomic_tangerine: '#fd9872',
+  acapulco: '#7BAF9E',
 };
 
 export const fontSize = {
