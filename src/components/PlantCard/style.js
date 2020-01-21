@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../shared/variables';
 
 export const Container = styled.div`
   @media (min-width: 768px) {
@@ -25,15 +26,15 @@ export const PlantCard = styled.div`
   width: 268px;
   background-color: yellow;
   flex-direction: column;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: ${colors.white};
+  border: 1px solid ${colors.white};
   border-radius: 10px;
   margin-bottom: 54px;
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px ${colors.bg_dark};
+    border: 1px solid ${colors.white};
   }
 
   img {
@@ -45,16 +46,16 @@ export const PlantCard = styled.div`
 export const PlantTitle = styled.h1`
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: ${fontSize['u-fontSize-18']};
   line-height: 28px;
-  color: #15573f;
+  color: ${colors.green_pea};
 `;
 
 export const PlantPrice = styled.p`
   font-weight: 300;
-  font-size: 18px;
+  font-size: ${fontSize['u-fontSize-18']};
   line-height: 28px;
-  color: #6e6e6e;
+  color: ${colors.dove_gray};
 `;
 
 export const BuyPlant = styled.div`
