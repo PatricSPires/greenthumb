@@ -55,7 +55,7 @@ export default class Plant extends Component {
               {sun === 'high' ? (
                 <PlantInformation>
                   <HighSun />
-                  High Sunight
+                  High Sunlight
                 </PlantInformation>
               ) : (
                 ''
