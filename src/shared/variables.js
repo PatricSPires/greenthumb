@@ -6,16 +6,19 @@ export const colors = {
   alto_six: '#d6d6d6',
   dove_gray: '#6e6e6e',
   bg_light: 'rgba(0, 0, 0, 0.0758577)',
+  bg_shadow: 'rgba(0, 0, 0, 0.0896799)',
   bg_dark: 'rgba(0, 0, 0, 0.25)',
   white: '#ffffff',
   silver_chalice: '#acacac',
   atomic_tangerine: '#fd9872',
   acapulco: '#7BAF9E',
   concrete: '#f2f2f2',
+  torch_red: '#f71d1d',
 };
 
 export const fontSize = {
   'u-fontSize-8': '0.5em',
+  'u-fontSize-12': '0.75em',
   'u-fontSize-14': '0.875em',
   'u-fontSize-16': '1em',
   'u-fontSize-18': '1em',
