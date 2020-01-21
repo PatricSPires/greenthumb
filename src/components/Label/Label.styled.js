@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../shared/variables';
 
 export const LabelComponent = styled.label`
-  font-size: 16px;
-  color: #6e6e6e;
+  font-size: ${fontSize['u-fontSize-16']};
+  color: ${colors.dove_gray};
   font-weight: 600;
   font-style: normal;
   line-height: 27px;
