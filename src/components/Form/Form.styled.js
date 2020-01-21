@@ -4,12 +4,16 @@ import { Field } from 'formik';
 export const Input = styled(Field)`
   background-color: #ffffff;
   max-width: 297px;
+  height: 40px;
   border-radius: 19px;
   font-size: 14px;
   color: #d0d0d0;
   border: none;
   padding: 6px 75px 6px 25px;
-  margin-bottom: 22px;
+
+  &:focus {
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.0896799);
+  }
 
   ${({ error }) =>
     error &&
@@ -59,7 +63,7 @@ export const FormContainer = styled.div`
       font-size: 16px;
       line-height: 29px;
       color: #6e6e6e;
-      max-width: 244px;
+      max-width: 250px;
       margin-bottom: 30px;
     }
 
@@ -72,8 +76,11 @@ export const FormContainer = styled.div`
 
 export const Error = styled.div`
   color: #f71d1d;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   font-size: 12px;
+  line-height: 27px;
+  margin-bottom: 22px;
 `;
 
 export const EmailSent = styled.div`
