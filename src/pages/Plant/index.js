@@ -63,7 +63,7 @@ export default class Plant extends Component {
               {sun === 'low' ? (
                 <PlantInformation>
                   <LowSun />
-                  Low Sunight
+                  Low Sunlight
                 </PlantInformation>
               ) : (
                 ''
@@ -71,7 +71,7 @@ export default class Plant extends Component {
               {sun === 'no' ? (
                 <PlantInformation>
                   <NoSun />
-                  No Sunight
+                  No Sunlight
                 </PlantInformation>
               ) : (
                 ''
@@ -88,7 +88,7 @@ export default class Plant extends Component {
               {water === 'regularly' ? (
                 <PlantInformation>
                   <TwoDrops />
-                  Water Regulary
+                  Water Regularly
                 </PlantInformation>
               ) : (
                 ''
