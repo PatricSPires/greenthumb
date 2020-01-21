@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../shared/variables';
 
 export const Purchase = styled.div`
   max-width: 381px;
@@ -11,7 +12,7 @@ export const Purchase = styled.div`
     max-width: 377px;
     text-align: left;
     margin-bottom: 10px;
-    color: #0c261c;
+    color: ${colors.bush};
   }
 
   img {
