@@ -3,7 +3,7 @@ export const colors = {
   bush: '#0c261c',
   wild_sand: '#f6f6f6',
   alto: '#d0d0d0',
-  alto_: '#d6d6d6',
+  alto_six: '#d6d6d6',
   dove_gray: '#6e6e6e',
   bg_light: 'rgba(0, 0, 0, 0.0758577)',
   bg_dark: 'rgba(0, 0, 0, 0.25)',

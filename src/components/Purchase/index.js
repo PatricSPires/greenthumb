@@ -18,10 +18,8 @@ export const Purchase = styled.div`
   }
 
   p {
-    font-size: 16px;
     font-weight: 300;
     font-style: normal;
-    color: #6e6e6e;
   }
 
   div {
