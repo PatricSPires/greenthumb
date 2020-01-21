@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../shared/variables';
 
 export const Card = styled.button.attrs({
   type: 'button',
 })`
   width: 265px;
-  background-color: #ffffff;
-  color: #acacac;
-  font-size: 16px;
-  box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.0758577);
+  background-color: ${colors.white};
+  color: ${colors.silver_chalice};
+  font-size: ${fontSize['u-fontSize-16']};
+  box-shadow: 0px 20px 34px ${colors.bg_light};
   border-radius: 5px;
   margin: 0 auto;
   display: flex;
@@ -15,6 +16,7 @@ export const Card = styled.button.attrs({
   align-items: center;
   padding: 16px 26px;
   border: none;
+  transition: 0.3s;
 
   svg {
     width: 42px;
@@ -24,8 +26,8 @@ export const Card = styled.button.attrs({
   &:hover {
     svg {
       path {
-        stroke: #ffffff;
-        fill: #ffffff;
+        stroke: ${colors.white};
+        fill: ${colors.white};
       }
     }
   }
@@ -36,8 +38,9 @@ export const Card = styled.button.attrs({
     padding: 42px 0;
 
     &:hover {
-      background-color: ${props => (props.primary ? '#fd9872' : '#7BAF9E')};
-      color: #ffffff;
+      background-color: ${props =>
+        props.primary ? `${colors.atomic_tangerine}` : `${colors.acapulco}`};
+      color: ${colors.white};
       font-weight: bold;
     }
 

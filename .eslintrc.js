@@ -22,5 +22,6 @@ module.exports = {
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
     'react/prop-types': 0,
+    'react/destructuring-assignment': [0, 'always'],
   },
 };

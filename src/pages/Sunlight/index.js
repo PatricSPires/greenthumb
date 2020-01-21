@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 import {
   Title,
@@ -7,7 +9,7 @@ import {
   ButtonGroup,
 } from './SunlightStyles';
 
-import { Button } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled';
 
 import Sun from '../../assets/illustrations/sun.png';
 import { ReactComponent as HighSun } from '../../assets/icons/coral/high-sun.svg';
@@ -22,15 +24,22 @@ import Header from '../../components/Header';
 import Logo from '../../components/Logo';
 import { Card } from '../../components/Card/Card.styled';
 
+import * as PreferenceActions from '../../store/modules/preferences/actions';
+
 class Sunlight extends Component {
   setInputOption = option => {
     localStorage.setItem('sunlight', JSON.stringify(option));
   };
 
+  handleAddPreference(preference) {
+    const { addSunlight } = this.props;
+    addSunlight(preference);
+  }
+
   render() {
     return (
       <>
-        <Container>
+        <Container bgPrimary>
           <AskContainer>
             <Header>
               <Logo />
@@ -43,31 +52,31 @@ class Sunlight extends Component {
               get.
             </Title>
             <CardGroup>
-              <Card primary onClick={() => this.setInputOption('high')}>
+              <Card primary onClick={() => this.handleAddPreference('high')}>
                 <HighSun />
                 High sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('low')}>
+              <Card primary onClick={() => this.handleAddPreference('low')}>
                 <LowhSun />
                 Low sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('no')}>
+              <Card primary onClick={() => this.handleAddPreference('no')}>
                 <NoAnswer />
                 No sunlight
               </Card>
             </CardGroup>
             <ButtonGroup>
               <NavLink to="/water">
-                <Button>
+                <MediumButton>
                   <GreenArrowRight />
                   next
-                </Button>
+                </MediumButton>
               </NavLink>
               <NavLink to="/">
-                <Button>
+                <MediumButton>
                   <GreenArrowLeft />
                   home
-                </Button>
+                </MediumButton>
               </NavLink>
             </ButtonGroup>
           </AskContainer>
@@ -77,4 +86,7 @@ class Sunlight extends Component {
   }
 }
 
-export default Sunlight;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Sunlight);

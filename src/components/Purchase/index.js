@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { colors } from '../../shared/variables';
 
 export const Purchase = styled.div`
   max-width: 381px;
   width: 100%;
+  padding: 0 0 0 28px;
 
   h1 {
     font-size: 50px;
@@ -10,7 +12,7 @@ export const Purchase = styled.div`
     max-width: 377px;
     text-align: left;
     margin-bottom: 10px;
-    color: #0c261c;
+    color: ${colors.bush};
   }
 
   img {
@@ -18,15 +20,17 @@ export const Purchase = styled.div`
   }
 
   p {
-    font-size: 16px;
     font-weight: 300;
     font-style: normal;
-    color: #6e6e6e;
   }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0;
   }
 `;

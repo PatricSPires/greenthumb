@@ -13,11 +13,11 @@ export default createGlobalStyle`
   }
 
   html, body, #root{
-    min-height: 100%;
+    height: 100%;
   }
 
   body{
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
   }

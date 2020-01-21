@@ -71,7 +71,7 @@ export const CardGroup = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    width: 100%;
+    width: 66%;
     margin: 0 auto;
     height: auto;
   }
@@ -85,7 +85,7 @@ export const ButtonGroup = styled.div`
   margin-top: 38px;
 
   @media (min-width: 768px) {
-    width: 80%;
+    width: 62%;
     margin: 50px auto 0;
     flex-direction: row-reverse;
     justify-content: space-between;

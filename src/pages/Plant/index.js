@@ -20,6 +20,7 @@ import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled'
 import PlantInformation from '../../components/PlantInformation';
 import { Informations } from './PlantStyles';
 import Logo from '../../components/Logo';
+import Header from '../../components/Header';
 
 export default class Plant extends Component {
   constructor() {
@@ -39,44 +40,44 @@ export default class Plant extends Component {
   }
 
   render() {
+    const { name, price, url, sun, water, toxicity } = this.state.plant;
     return (
       <Container>
-        <Logo />
+        <Header>
+          <Logo />
+        </Header>
         <BuyContainer>
           <Purchase>
-            <h1>{this.state.plant.name}</h1>
-            <Price price={this.state.plant.price} />
-            <img
-              src={this.state.plant.url}
-              alt={`This plant is: ${this.state.plant.name}`}
-            />
+            <h1>{name}</h1>
+            <Price price={price} fontSize={24} />
+            <img src={url} alt={`This plant is: ${name}`} />
             <Informations>
-              {this.state.plant.sun === 'high' ? (
+              {sun === 'high' ? (
                 <PlantInformation>
                   <HighSun />
-                  High Sunight
+                  High Sunlight
                 </PlantInformation>
               ) : (
                 ''
               )}
-              {this.state.plant.sun === 'low' ? (
+              {sun === 'low' ? (
                 <PlantInformation>
                   <LowSun />
-                  Low Sunight
+                  Low Sunlight
                 </PlantInformation>
               ) : (
                 ''
               )}
-              {this.state.plant.sun === 'no' ? (
+              {sun === 'no' ? (
                 <PlantInformation>
                   <NoSun />
-                  No Sunight
+                  No Sunlight
                 </PlantInformation>
               ) : (
                 ''
               )}
 
-              {this.state.plant.water === 'rarely' ? (
+              {water === 'rarely' ? (
                 <PlantInformation>
                   <OneDrop />
                   Water Rarely
@@ -84,15 +85,15 @@ export default class Plant extends Component {
               ) : (
                 ''
               )}
-              {this.state.plant.water === 'regularly' ? (
+              {water === 'regularly' ? (
                 <PlantInformation>
                   <TwoDrops />
-                  Water Regulary
+                  Water Regularly
                 </PlantInformation>
               ) : (
                 ''
               )}
-              {this.state.plant.water === 'daily' ? (
+              {water === 'daily' ? (
                 <PlantInformation>
                   <ThreeDrops />
                   Water Daily
@@ -101,7 +102,7 @@ export default class Plant extends Component {
                 ''
               )}
 
-              {this.state.plant.toxicity ? (
+              {toxicity ? (
                 <PlantInformation>
                   <Toxic />
                   <strong>Beware!</strong> &nbsp;Toxic for pets

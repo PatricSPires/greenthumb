@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import store from '../../store';
 
 import { Title, IllustrationContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
-import { Button } from '../../components/Button/Button.styled';
+import { LargerButton } from '../../components/Button/Button.styled';
 
 // Icons
 import toxic from '../../assets/icons/grey/toxic.svg';
@@ -44,17 +45,14 @@ class Picks extends Component {
   }
 
   handleData = async e => {
-    const sunlight = JSON.parse(localStorage.getItem('sunlight'));
-    const water = JSON.parse(localStorage.getItem('water'));
-    const pets = JSON.parse(localStorage.getItem('pets'));
+    const { preferences } = store.getState();
     const response = await api.get(
-      `?sun=${sunlight}&water=${water}&pets=${pets}`
+      `?sun=${preferences.sunlight}&water=${preferences.water}&pets=${preferences.pet}`
     );
 
     this.setState({
       plants: [...this.state.plants, ...response.data],
     });
-    console.log(this.state.plants);
   };
 
   saveplant = id => {
@@ -64,7 +62,7 @@ class Picks extends Component {
   render() {
     return (
       <>
-        <Container>
+        <Container bgPrimary>
           <PicksContainer>
             <Header>
               <Logo />
@@ -109,9 +107,9 @@ class Picks extends Component {
                       </PlantAdditionals>
                     </PlantInformations>
                     <NavLink to="/plant">
-                      <Button onClick={() => this.saveplant(plant.id)}>
+                      <LargerButton onClick={() => this.saveplant(plant.id)}>
                         buy now
-                      </Button>
+                      </LargerButton>
                     </NavLink>
                   </BuyPlant>
                 </PlantCard>

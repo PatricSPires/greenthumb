@@ -3,7 +3,7 @@ import { Formik, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import { FormContainer, Error, EmailSent, Input } from './Form.styled';
-import { Button } from '../Button/Button.styled';
+import { SmallButton } from '../Button/Button.styled';
 import Label from '../Label';
 import Envelop from '../../assets/illustrations/envelop.png';
 
@@ -54,7 +54,7 @@ function GreenThumbForm() {
                 <Error>
                   <ErrorMessage name="email" />
                 </Error>
-                <Button type="submit">send</Button>
+                <SmallButton type="submit">send</SmallButton>
                 <EmailSent>
                   <h1>Thank you!</h1>
                   <p>You will hear from us soon. Please check your e-mail!</p>

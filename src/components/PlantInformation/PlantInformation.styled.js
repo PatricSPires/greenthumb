@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+import { colors } from '../../shared/variables';
 
 export const PlantInformationComponent = styled.div`
   display: flex;
   flex-direction: row !important;
   align-items: center !important;
-  color: #6e6e6e;
+  color: ${colors.dove_gray};
+  margin-bottom: 14px;
 
   svg {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     margin-right: 16px;
   }
 `;

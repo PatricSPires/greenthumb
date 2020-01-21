@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -9,7 +11,7 @@ import {
 } from './WaterStyles';
 
 import { Card } from '../../components/Card/Card.styled';
-import { Button } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled';
 
 import WateringCan from '../../assets/illustrations/wateringcan.png';
 import { ReactComponent as OneDrop } from '../../assets/icons/green/one-drop.svg';
@@ -22,16 +24,22 @@ import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 class Water extends Component {
   setInputOption = option => {
     localStorage.setItem('water', JSON.stringify(option));
   };
 
+  handleAddPreference(preference) {
+    const { addWater } = this.props;
+    addWater(preference);
+  }
+
   render() {
     return (
       <>
-        <Container>
+        <Container bgPrimary>
           <AskContainer>
             <Header>
               <Logo />
@@ -43,31 +51,31 @@ class Water extends Component {
               How often do you want to <strong>water</strong> your plant?
             </Title>
             <CardGroup>
-              <Card onClick={() => this.setInputOption('rarely')}>
+              <Card onClick={() => this.handleAddPreference('rarely')}>
                 <OneDrop />
                 Rarely
               </Card>
-              <Card onClick={() => this.setInputOption('regularly')}>
+              <Card onClick={() => this.handleAddPreference('regularly')}>
                 <TwoDrops />
                 Regularly
               </Card>
-              <Card onClick={() => this.setInputOption('daily')}>
+              <Card onClick={() => this.handleAddPreference('daily')}>
                 <ThreeDrops />
                 Daily
               </Card>
             </CardGroup>
             <ButtonGroup>
               <NavLink to="/pets">
-                <Button>
+                <MediumButton>
                   <GreenArrowRight />
                   next
-                </Button>
+                </MediumButton>
               </NavLink>
               <NavLink to="/sunlight">
-                <Button>
+                <MediumButton>
                   <GreenArrowLeft />
                   previous
-                </Button>
+                </MediumButton>
               </NavLink>
             </ButtonGroup>
           </AskContainer>
@@ -76,4 +84,8 @@ class Water extends Component {
     );
   }
 }
-export default Water;
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Water);

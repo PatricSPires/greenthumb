@@ -1,17 +1,20 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../shared/variables';
 
-export const Button = styled.button.attrs(props => ({
+export const SmallButton = styled.button.attrs(props => ({
   type: 'submit',
   disabled: props.loading,
 }))`
-  background-color: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+  background-color: ${props =>
+    props.primary ? `${colors.green_pea}` : 'transparent'};
   border-radius: 28px;
   height: 50px;
-  width: 174px;
-  color: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
-  border: ${props => (props.primary ? 0 : '1px solid #15573f')};
-  font-size: 16px;
+  color: ${props =>
+    props.primary ? `${colors.white}` : `${colors.green_pea}`};
+  border: ${props => (props.primary ? 0 : `1px solid ${colors.green_pea}`)};
+  font-size: ${fontSize['u-fontSize-16']};
   margin-bottom: 34px;
+  transition: 0.2s;
 
   display: flex;
   justify-content: space-evenly;
@@ -19,19 +22,25 @@ export const Button = styled.button.attrs(props => ({
 
   svg {
     path {
-      stroke: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
+      stroke: ${props =>
+        props.primary ? `${colors.white}` : `${colors.green_pea}`};
     }
   }
 
   &:hover {
-    background-color: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
+    background-color: ${props =>
+      props.primary ? 'transparent' : `${colors.green_pea}`};
     border: ${props =>
-      props.primary ? '1px solid #15573f' : '1px solid #ffffff'};
-    color: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+      props.primary
+        ? `1px solid ${colors.green_pea}`
+        : `1px solid ${colors.white}`};
+    color: ${props =>
+      props.primary ? `${colors.green_pea}` : `${colors.white}`};
 
     svg {
       path {
-        stroke: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+        stroke: ${props =>
+          props.primary ? `${colors.green_pea}` : `${colors.white}`};
       }
     }
   }
@@ -39,5 +48,27 @@ export const Button = styled.button.attrs(props => ({
   &[disabled] {
     cursor: not-allowed;
     opacity: 0.6;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 146px;
+    width: 100%;
+  }
+`;
+
+export const MediumButton = styled(SmallButton)`
+  width: 174px;
+
+  @media (min-width: 1024px) {
+    width: 174px;
+  }
+`;
+
+export const LargerButton = styled(SmallButton)`
+  max-width: 292px;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    max-width: 292px;
   }
 `;

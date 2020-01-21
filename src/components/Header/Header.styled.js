@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../shared/variables';
 
 export const HeaderComponent = styled.header`
   max-width: 732px;
@@ -13,15 +14,14 @@ export const HeaderComponent = styled.header`
 `;
 
 export const Title = styled.h2`
-  font-size: 22px;
+  font-size: ${fontSize['u-fontSize-22']};
   max-width: 230px;
   width: 100%;
   text-align: center;
   margin: 0 auto 32px;
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
-  color: #6e6e6e;
+  color: ${colors.dove_gray};
 
   strong {
     font-weight: bold;
@@ -30,13 +30,13 @@ export const Title = styled.h2`
   @media (min-width: 768px) {
     max-width: 470px;
     margin-bottom: 65px;
-    font-size: 30px;
+    font-size: ${fontSize['u-fontSize-30']};
   }
 `;
 
 export const Subtitle = styled.h3`
-  font-size: 14px;
-  color: #6e6e6e;
+  font-size: ${fontSize['u-fontSize-14']};
+  color: ${colors.dove_gray};
   line-height: 39px;
   text-align: center;
 `;

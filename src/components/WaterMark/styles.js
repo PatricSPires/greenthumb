@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../shared/variables';
 
 export const Container = styled.div`
   display: none;
@@ -17,7 +18,7 @@ export const Container = styled.div`
 
 export const Stripe = styled.div`
   width: 2px;
-  background-color: #15573f;
+  background-color: ${colors.green_pea};
   opacity: 41.48%;
   height: 429px;
 `;
