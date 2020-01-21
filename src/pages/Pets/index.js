@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -17,6 +19,7 @@ import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
 import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
 import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
+import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
@@ -27,6 +30,11 @@ class Pets extends Component {
   setInputOption = option => {
     localStorage.setItem('pets', JSON.stringify(option));
   };
+
+  handleAddPreference(preference) {
+    const { addPet } = this.props;
+    addPet(preference);
+  }
 
   render() {
     return (
@@ -47,11 +55,11 @@ class Pets extends Component {
               for your buddy.
             </Subtitle>
             <CardGroup>
-              <Card primary onClick={() => this.setInputOption(true)}>
+              <Card primary onClick={() => this.handleAddPreference(true)}>
                 <Pet />
                 Yes
               </Card>
-              <Card primary onClick={() => this.setInputOption(false)}>
+              <Card primary onClick={() => this.handleAddPreference(false)}>
                 <NoAnswer />
                 No/They don't care
               </Card>
@@ -77,4 +85,7 @@ class Pets extends Component {
   }
 }
 
-export default Pets;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Pets);

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -22,11 +24,17 @@ import Container from '../../components/Container';
 import { AskContainer } from '../../components/AskContainer';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 class Water extends Component {
   setInputOption = option => {
     localStorage.setItem('water', JSON.stringify(option));
   };
+
+  handleAddPreference(preference) {
+    const { addWater } = this.props;
+    addWater(preference);
+  }
 
   render() {
     return (
@@ -43,15 +51,15 @@ class Water extends Component {
               How often do you want to <strong>water</strong> your plant?
             </Title>
             <CardGroup>
-              <Card onClick={() => this.setInputOption('rarely')}>
+              <Card onClick={() => this.handleAddPreference('rarely')}>
                 <OneDrop />
                 Rarely
               </Card>
-              <Card onClick={() => this.setInputOption('regularly')}>
+              <Card onClick={() => this.handleAddPreference('regularly')}>
                 <TwoDrops />
                 Regularly
               </Card>
-              <Card onClick={() => this.setInputOption('daily')}>
+              <Card onClick={() => this.handleAddPreference('daily')}>
                 <ThreeDrops />
                 Daily
               </Card>
@@ -76,4 +84,8 @@ class Water extends Component {
     );
   }
 }
-export default Water;
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Water);

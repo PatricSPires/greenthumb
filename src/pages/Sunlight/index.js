@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 import {
   Title,
@@ -22,10 +24,17 @@ import Header from '../../components/Header';
 import Logo from '../../components/Logo';
 import { Card } from '../../components/Card/Card.styled';
 
+import * as PreferenceActions from '../../store/modules/preferences/actions';
+
 class Sunlight extends Component {
   setInputOption = option => {
     localStorage.setItem('sunlight', JSON.stringify(option));
   };
+
+  handleAddPreference(preference) {
+    const { addSunlight } = this.props;
+    addSunlight(preference);
+  }
 
   render() {
     return (
@@ -43,15 +52,15 @@ class Sunlight extends Component {
               get.
             </Title>
             <CardGroup>
-              <Card primary onClick={() => this.setInputOption('high')}>
+              <Card primary onClick={() => this.handleAddPreference('high')}>
                 <HighSun />
                 High sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('low')}>
+              <Card primary onClick={() => this.handleAddPreference('low')}>
                 <LowhSun />
                 Low sunlight
               </Card>
-              <Card primary onClick={() => this.setInputOption('no')}>
+              <Card primary onClick={() => this.handleAddPreference('no')}>
                 <NoAnswer />
                 No sunlight
               </Card>
@@ -77,4 +86,7 @@ class Sunlight extends Component {
   }
 }
 
-export default Sunlight;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PreferenceActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Sunlight);

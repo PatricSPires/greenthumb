@@ -39,3 +39,4 @@ TODO:
 - [x] GT-38: create a header component.
 - [x] GT-39: refactor card component.
 - [x] GT-41: refactor a form component and add the MailSent screen.
+- [x] GT-42: add redux to control all preferences.
