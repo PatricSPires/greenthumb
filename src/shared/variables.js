@@ -7,6 +7,7 @@ export const colors = {
   dove_gray: '#6e6e6e',
   bg_light: 'rgba(0, 0, 0, 0.0758577)',
   bg_dark: 'rgba(0, 0, 0, 0.25)',
+  white: '#ffffff',
 };
 
 export const fontSize = {
