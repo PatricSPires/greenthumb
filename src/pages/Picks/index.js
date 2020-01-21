@@ -62,7 +62,7 @@ class Picks extends Component {
   render() {
     return (
       <>
-        <Container>
+        <Container bgPrimary>
           <PicksContainer>
             <Header>
               <Logo />

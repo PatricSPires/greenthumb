@@ -39,7 +39,7 @@ class Pets extends Component {
   render() {
     return (
       <>
-        <Container>
+        <Container bgPrimary>
           <AskContainer>
             <Header>
               <Logo />

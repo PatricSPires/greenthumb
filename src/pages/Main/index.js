@@ -11,7 +11,7 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/white/whiteArro
 export default function Main() {
   return (
     <>
-      <Container>
+      <Container bgPrimary>
         <img className="logo" src={Logo} alt="sadasd" />
         <Title>Find your next green friend</Title>
         <NavLink to="/sunlight">
