@@ -15,6 +15,7 @@ export const Card = styled.button.attrs({
   align-items: center;
   padding: 16px 26px;
   border: none;
+  transition: 0.3s;
 
   svg {
     width: 42px;

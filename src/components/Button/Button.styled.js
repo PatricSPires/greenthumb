@@ -11,6 +11,7 @@ export const SmallButton = styled.button.attrs(props => ({
   border: ${props => (props.primary ? 0 : '1px solid #15573f')};
   font-size: 16px;
   margin-bottom: 34px;
+  transition: 0.2s;
 
   display: flex;
   justify-content: space-evenly;
