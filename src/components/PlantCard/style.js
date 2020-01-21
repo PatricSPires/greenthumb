@@ -16,7 +16,7 @@ export const PlantContainer = styled.div`
   width: 100%;
   max-width: 864px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 `;
 
@@ -27,9 +27,14 @@ export const PlantCard = styled.div`
   flex-direction: column;
   background-color: #ffffff;
   border: 1px solid #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin-bottom: 54px;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffffff;
+  }
 
   img {
     width: 200px;
