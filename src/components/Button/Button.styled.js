@@ -4,7 +4,7 @@ export const SmallButton = styled.button.attrs(props => ({
   type: 'submit',
   disabled: props.loading,
 }))`
-  background-color: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
+  background-color: ${props => (props.primary ? '#15573f' : 'transparent')};
   border-radius: 28px;
   height: 50px;
   color: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
@@ -24,7 +24,7 @@ export const SmallButton = styled.button.attrs(props => ({
   }
 
   &:hover {
-    background-color: ${props => (props.primary ? '#FFFFFF' : '#15573f')};
+    background-color: ${props => (props.primary ? 'transparent' : '#15573f')};
     border: ${props =>
       props.primary ? '1px solid #15573f' : '1px solid #ffffff'};
     color: ${props => (props.primary ? '#15573f' : '#FFFFFF')};
