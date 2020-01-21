@@ -4,7 +4,7 @@ import store from '../../store';
 
 import { Title, IllustrationContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
-import { Button } from '../../components/Button/Button.styled';
+import { LargerButton } from '../../components/Button/Button.styled';
 
 // Icons
 import toxic from '../../assets/icons/grey/toxic.svg';
@@ -107,9 +107,9 @@ class Picks extends Component {
                       </PlantAdditionals>
                     </PlantInformations>
                     <NavLink to="/plant">
-                      <Button onClick={() => this.saveplant(plant.id)}>
+                      <LargerButton onClick={() => this.saveplant(plant.id)}>
                         buy now
-                      </Button>
+                      </LargerButton>
                     </NavLink>
                   </BuyPlant>
                 </PlantCard>

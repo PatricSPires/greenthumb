@@ -12,7 +12,7 @@ import {
 } from './PetStyles';
 
 import { Card } from '../../components/Card/Card.styled';
-import { Button } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled';
 
 import Dog from '../../assets/illustrations/dog.png';
 import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
@@ -66,16 +66,16 @@ class Pets extends Component {
             </CardGroup>
             <ButtonGroup>
               <NavLink to="/picks">
-                <Button>
+                <MediumButton>
                   <GreenArrowRight />
                   finish
-                </Button>
+                </MediumButton>
               </NavLink>
               <NavLink to="/water">
-                <Button>
+                <MediumButton>
                   <GreenArrowLeft />
                   previous
-                </Button>
+                </MediumButton>
               </NavLink>
             </ButtonGroup>
           </AskContainer>

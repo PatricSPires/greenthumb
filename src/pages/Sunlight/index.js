@@ -9,7 +9,7 @@ import {
   ButtonGroup,
 } from './SunlightStyles';
 
-import { Button } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled';
 
 import Sun from '../../assets/illustrations/sun.png';
 import { ReactComponent as HighSun } from '../../assets/icons/coral/high-sun.svg';
@@ -67,16 +67,16 @@ class Sunlight extends Component {
             </CardGroup>
             <ButtonGroup>
               <NavLink to="/water">
-                <Button>
+                <MediumButton>
                   <GreenArrowRight />
                   next
-                </Button>
+                </MediumButton>
               </NavLink>
               <NavLink to="/">
-                <Button>
+                <MediumButton>
                   <GreenArrowLeft />
                   home
-                </Button>
+                </MediumButton>
               </NavLink>
             </ButtonGroup>
           </AskContainer>

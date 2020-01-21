@@ -11,7 +11,7 @@ import {
 } from './WaterStyles';
 
 import { Card } from '../../components/Card/Card.styled';
-import { Button } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled';
 
 import WateringCan from '../../assets/illustrations/wateringcan.png';
 import { ReactComponent as OneDrop } from '../../assets/icons/green/one-drop.svg';
@@ -66,16 +66,16 @@ class Water extends Component {
             </CardGroup>
             <ButtonGroup>
               <NavLink to="/pets">
-                <Button>
+                <MediumButton>
                   <GreenArrowRight />
                   next
-                </Button>
+                </MediumButton>
               </NavLink>
               <NavLink to="/sunlight">
-                <Button>
+                <MediumButton>
                   <GreenArrowLeft />
                   previous
-                </Button>
+                </MediumButton>
               </NavLink>
             </ButtonGroup>
           </AskContainer>
