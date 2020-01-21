@@ -11,6 +11,7 @@ export const colors = {
   silver_chalice: '#acacac',
   atomic_tangerine: '#fd9872',
   acapulco: '#7BAF9E',
+  concrete: '#f2f2f2',
 };
 
 export const fontSize = {
