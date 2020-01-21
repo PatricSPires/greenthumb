@@ -6,4 +6,9 @@ export const LabelComponent = styled.label`
   font-weight: 600;
   font-style: normal;
   line-height: 27px;
+  padding-left: 18px;
+
+  @media (min-width: 1024px) {
+    padding-left: 0;
+  }
 `;
