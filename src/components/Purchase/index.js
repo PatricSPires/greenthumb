@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Purchase = styled.div`
   max-width: 381px;
   width: 100%;
+  padding: 0 0 0 28px;
 
   h1 {
     font-size: 50px;
@@ -26,5 +27,9 @@ export const Purchase = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0;
   }
 `;
