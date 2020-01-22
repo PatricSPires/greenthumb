@@ -27,10 +27,6 @@ import { Card } from '../../components/Card/Card.styled';
 import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 class Sunlight extends Component {
-  setInputOption = option => {
-    localStorage.setItem('sunlight', JSON.stringify(option));
-  };
-
   handleAddPreference(preference) {
     const { addSunlight } = this.props;
     addSunlight(preference);
