@@ -24,15 +24,6 @@ export const Card = styled.button.attrs({
     margin-right: 20px;
   }
 
-  &:hover {
-    svg {
-      path {
-        stroke: ${colors.white};
-        fill: ${colors.white};
-      }
-    }
-  }
-
   @media (min-width: 769px) {
     width: 215px;
     flex-direction: column;
@@ -48,8 +39,17 @@ export const Card = styled.button.attrs({
     svg {
       width: 67px;
       height: 67px;
-      margin-right: 20px;
+      margin-right: 0;
       margin-bottom: 16px;
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: ${colors.white};
+          fill: ${colors.white};
+        }
+      }
     }
   }
 `;
