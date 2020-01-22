@@ -51,11 +51,13 @@ export const IllustrationContainer = styled.div`
 
   img {
     width: 146px;
+    height: 72px;
   }
 
   @media (min-width: 1024px) {
     img {
       width: 226px;
+      height: 112px;
     }
   }
 `;

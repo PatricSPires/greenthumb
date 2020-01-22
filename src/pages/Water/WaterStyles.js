@@ -29,6 +29,7 @@ export const IllustrationContainer = styled.div`
 
   img {
     width: 96px;
+    height: 74px;
   }
 `;
 

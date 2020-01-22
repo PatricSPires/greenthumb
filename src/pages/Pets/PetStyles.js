@@ -44,7 +44,8 @@ export const IllustrationContainer = styled.div`
   margin-bottom: 20px;
 
   img {
-    width: 96px;
+    width: 90px;
+    height: 74px;
   }
 `;
 
