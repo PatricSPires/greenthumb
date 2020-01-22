@@ -75,15 +75,3 @@ export const PlantInformations = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
-export const PlantAdditionals = styled.div`
-  display: flex;
-  justify-content: space-around;
-  max-width: 92px;
-  width: 100%;
-  margin-bottom: 12px;
-
-  img {
-    width: auto;
-  }
-`;

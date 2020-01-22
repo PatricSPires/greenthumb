@@ -6,19 +6,11 @@ import { Title, IllustrationContainer } from './PicksStyles';
 import HandPick from '../../assets/illustrations/pick.png';
 import { LargerButton } from '../../components/Button/Button.styled';
 
-// Icons
-import toxic from '../../assets/icons/grey/toxic.svg';
-import highSun from '../../assets/icons/grey/highSun.svg';
-import lowSun from '../../assets/icons/grey/lowSun.svg';
-import noSun from '../../assets/icons/grey/noSun.svg';
-import oneDrop from '../../assets/icons/grey/oneDrop.svg';
-import twoDrops from '../../assets/icons/grey/twoDrops.svg';
-import threeDrops from '../../assets/icons/grey/threeDrops.svg';
-
 import Container from '../../components/Container';
 import { PicksContainer } from '../../components/PicksContainer/PicksContainer.styled';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import PlantAdditionals from '../../components/PlantAdditionals';
 
 import {
   PlantContainer,
@@ -27,7 +19,6 @@ import {
   PlantPrice,
   BuyPlant,
   PlantInformations,
-  PlantAdditionals,
 } from '../../components/PlantCard/style';
 
 import api from '../../services/api';
@@ -79,32 +70,11 @@ class Picks extends Component {
                     <PlantTitle>{plant.name}</PlantTitle>
                     <PlantInformations>
                       <PlantPrice>${plant.price}</PlantPrice>
-                      <PlantAdditionals>
-                        {plant.toxicity ? (
-                          <img src={toxic} alt="This plant is toxic" />
-                        ) : (
-                          ''
-                        )}
-                        {plant.sun === 'high' && <img src={highSun} alt="" />}
-                        {plant.sun === 'low' && <img src={lowSun} alt="" />}
-                        {plant.sun === 'no' && <img src={noSun} alt="" />}
-
-                        {plant.water === 'rarely' ? (
-                          <img src={oneDrop} alt="" />
-                        ) : (
-                          ''
-                        )}
-                        {plant.water === 'regularly' ? (
-                          <img src={twoDrops} alt="" />
-                        ) : (
-                          ''
-                        )}
-                        {plant.water === 'daily' ? (
-                          <img src={threeDrops} alt="" />
-                        ) : (
-                          ''
-                        )}
-                      </PlantAdditionals>
+                      <PlantAdditionals
+                        sun={plant.sun}
+                        water={plant.water}
+                        toxicity={plant.toxicity}
+                      />
                     </PlantInformations>
                     <NavLink to="/plant">
                       <LargerButton onClick={() => this.saveplant(plant.id)}>
