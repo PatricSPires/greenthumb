@@ -8,7 +8,7 @@ export const LogoComponent = styled.div`
     width: 166px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;

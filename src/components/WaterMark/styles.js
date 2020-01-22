@@ -4,7 +4,7 @@ import { colors } from '../../shared/variables';
 export const Container = styled.div`
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: flex;
     width: 12vw;
     flex-direction: column;

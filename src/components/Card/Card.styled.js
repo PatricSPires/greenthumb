@@ -24,7 +24,7 @@ export const Card = styled.button.attrs({
     margin-right: 20px;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     width: 215px;
     flex-direction: column;
     padding: 42px 0;
