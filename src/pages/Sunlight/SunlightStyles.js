@@ -29,6 +29,7 @@ export const IllustrationContainer = styled.div`
 
   img {
     width: 96px;
+    height: 96px;
   }
 `;
 
@@ -53,7 +54,7 @@ export const CardGroup = styled.div`
   flex-direction: column;
   height: 248px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
@@ -67,7 +68,7 @@ export const ButtonGroup = styled.div`
   align-items: center;
   margin-top: 38px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 96%;
     margin: 50px auto 0;
     flex-direction: row-reverse;

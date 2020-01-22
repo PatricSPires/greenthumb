@@ -27,10 +27,6 @@ import Logo from '../../components/Logo';
 import * as PreferenceActions from '../../store/modules/preferences/actions';
 
 class Water extends Component {
-  setInputOption = option => {
-    localStorage.setItem('water', JSON.stringify(option));
-  };
-
   handleAddPreference(preference) {
     const { addWater } = this.props;
     addWater(preference);

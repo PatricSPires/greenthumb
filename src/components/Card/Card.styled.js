@@ -12,7 +12,7 @@ export const Card = styled.button.attrs({
   border-radius: 5px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 26px;
   border: none;
@@ -21,18 +21,10 @@ export const Card = styled.button.attrs({
   svg {
     width: 42px;
     height: 42px;
+    margin-right: 20px;
   }
 
-  &:hover {
-    svg {
-      path {
-        stroke: ${colors.white};
-        fill: ${colors.white};
-      }
-    }
-  }
-
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     width: 215px;
     flex-direction: column;
     padding: 42px 0;
@@ -47,7 +39,17 @@ export const Card = styled.button.attrs({
     svg {
       width: 67px;
       height: 67px;
+      margin-right: 0;
       margin-bottom: 16px;
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: ${colors.white};
+          fill: ${colors.white};
+        }
+      }
     }
   }
 `;

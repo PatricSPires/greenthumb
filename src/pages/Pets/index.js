@@ -27,10 +27,6 @@ import Header from '../../components/Header';
 import Logo from '../../components/Logo';
 
 class Pets extends Component {
-  setInputOption = option => {
-    localStorage.setItem('pets', JSON.stringify(option));
-  };
-
   handleAddPreference(preference) {
     const { addPet } = this.props;
     addPet(preference);
