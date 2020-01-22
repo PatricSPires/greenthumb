@@ -7,7 +7,7 @@ export const Input = styled(Field)`
   height: 40px;
   border-radius: 19px;
   font-size: ${fontSize['u-fontSize-14']};
-  color: ${colors.alto};
+  color: ${colors.dove_gray};
   border: none;
   padding: 6px 75px 6px 25px;
   width: 100%;
@@ -84,34 +84,4 @@ export const Error = styled.div`
   font-size: ${fontSize['u-fontSize-12']};
   line-height: 27px;
   margin-bottom: 22px;
-`;
-
-export const EmailSent = styled.div`
-  position: absolute;
-  top: 138px;
-  background-color: ${colors.wild_sand};
-  width: 381px;
-  height: 504px;
-  padding: 46px 80px;
-  display: none;
-
-  h1 {
-    font-size: 35px;
-    color: ${colors.bush};
-    text-align: center;
-    margin-bottom: 16px;
-  }
-
-  p {
-    font-size: ${fontSize['u-fontSize-16']};
-    line-height: 27px;
-    color: ${colors.dove_gray};
-    text-align: center;
-    max-width: 265px;
-    margin: 0 auto 36px;
-  }
-
-  img {
-    margin: 0 auto;
-  }
 `;
