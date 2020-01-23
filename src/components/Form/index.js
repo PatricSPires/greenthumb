@@ -32,7 +32,7 @@ class GreenThumbForm extends Component {
             initialValues={{ name: '', email: '' }}
             validationSchema={Yup.object({
               name: Yup.string()
-                .min(2, 'Too Short!')
+                .min(10, 'Name and surname')
                 .max(70, 'Too Long')
                 .required('Your name is required'),
               email: Yup.string()
