@@ -68,6 +68,7 @@ To build this project I choose to use the [reactJs](https://reactjs.org/) becaus
 ### Here you can see the deploy status
 
 To deploy this application I choose the [Netlify](https://www.netlify.com/) and you can check bellow the build information.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/62d6ac72-42f4-4732-ade0-13c8f567b6ab/deploy-status)](https://app.netlify.com/sites/angry-pasteur-399ade/deploys)
 
 <h1>
