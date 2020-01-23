@@ -29,7 +29,8 @@ export const Card = styled.button.attrs({
     flex-direction: column;
     padding: 42px 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: ${props =>
         props.primary ? `${colors.atomic_tangerine}` : `${colors.acapulco}`};
       color: ${colors.white};
@@ -43,7 +44,8 @@ export const Card = styled.button.attrs({
       margin-bottom: 16px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       svg {
         path {
           stroke: ${colors.white};
