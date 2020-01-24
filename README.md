@@ -4,7 +4,7 @@
 
 </h1>
 
-Hey there, nice to meet you. This application is a _plant simulator_. Here the user can choose an ideal plant, based on three questions:
+Hey, nice to meet you. This application is a _plant simulator_. Here the user can choose an ideal plant, based on three questions:
 
 - _Sun quantity_
 - _Watering frequency_
