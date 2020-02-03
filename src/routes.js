@@ -17,7 +17,7 @@ export default function Routes() {
         <Route path="/water" component={Water} />
         <Route path="/pets" component={Pets} />
         <Route path="/picks" component={Picks} />
-        <Route path="/plant" component={Plant} />
+        <Route path="/:plantId/plant" component={Plant} />
       </Switch>
     </BrowserRouter>
   );

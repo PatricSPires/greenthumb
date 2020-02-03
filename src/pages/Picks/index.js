@@ -66,7 +66,7 @@ function Picks() {
                       toxicity={plant.toxicity}
                     />
                   </PlantInformations>
-                  <NavLink to="/plant">
+                  <NavLink to={`/${plant.id}/plant`}>
                     <LargerButton onClick={() => saveplant(plant.id)}>
                       buy now
                     </LargerButton>
