@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Skeleton from 'react-loading-skeleton';
 import api from '../../services/api';
 
 import { Purchase } from '../../components/Purchase';
@@ -43,9 +44,13 @@ function Plant({ match }) {
       </Header>
       <BuyContainer>
         <Purchase>
-          <h1>{name}</h1>
+          <h1>{name || <Skeleton count={1} />}</h1>
           <Price price={price} fontSize={24} />
-          <img src={url} alt={`This plant is: ${name}`} />
+          {url ? (
+            <img src={url} alt={`This plant is: ${name}`} />
+          ) : (
+            <Skeleton />
+          )}
           <Informations>
             {sun === 'high' ? (
               <PlantInformation>
