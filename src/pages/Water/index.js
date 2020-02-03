@@ -41,7 +41,7 @@ class Water extends Component {
               <Logo />
             </Header>
             <IllustrationContainer>
-              <img src={WateringCan} alt="" />
+              <img src={WateringCan} alt="Wateringcan like icon" />
             </IllustrationContainer>
             <Title>
               How often do you want to <strong>water</strong> your plant?

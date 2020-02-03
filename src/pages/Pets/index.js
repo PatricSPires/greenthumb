@@ -41,7 +41,7 @@ class Pets extends Component {
               <Logo />
             </Header>
             <IllustrationContainer>
-              <img src={Dog} alt="" />
+              <img src={Dog} alt="Dog like icon" />
             </IllustrationContainer>
             <Title>
               Do you have pets? Do they <strong>chew</strong> plants?

@@ -40,7 +40,7 @@ class Sunlight extends Component {
             <Header>
               <Logo />
               <IllustrationContainer>
-                <img src={Sun} alt="" />
+                <img src={Sun} alt="Sun like icon" />
               </IllustrationContainer>
             </Header>
             <Title>

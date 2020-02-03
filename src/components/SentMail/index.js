@@ -10,7 +10,7 @@ function SentMail({ sent }) {
       <EmailSent>
         <h1>Thank you!</h1>
         <p>You will hear from us soon. Please check your e-mail!</p>
-        <img src={Envelop} alt="" />
+        <img src={Envelop} alt="Envelop email sent" />
       </EmailSent>
     );
   }
