@@ -37,10 +37,6 @@ function Picks() {
     handleData();
   }, []);
 
-  function saveplant(id) {
-    localStorage.setItem('plant', id);
-  }
-
   return (
     <>
       <Container bgPrimary>
@@ -66,10 +62,8 @@ function Picks() {
                       toxicity={plant.toxicity}
                     />
                   </PlantInformations>
-                  <NavLink to="/plant">
-                    <LargerButton onClick={() => saveplant(plant.id)}>
-                      buy now
-                    </LargerButton>
+                  <NavLink to={`/plant/${plant.id}`}>
+                    <LargerButton>buy now</LargerButton>
                   </NavLink>
                 </BuyPlant>
               </PlantCard>

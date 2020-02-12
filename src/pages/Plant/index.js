@@ -22,18 +22,17 @@ import { Informations } from './PlantStyles';
 import Logo from '../../components/Logo';
 import Header from '../../components/Header';
 
-function Plant() {
+function Plant(props) {
   const [plant, setPlant] = useState([]);
 
   useEffect(() => {
-    const selectedPlant = localStorage.getItem('plant');
-
+    const { match } = props;
     async function getPlant() {
-      const response = await api.get(`/plant?id=${selectedPlant}`);
+      const response = await api.get(`/plant?id=${match.params.id}`);
       setPlant(response.data);
     }
     getPlant();
-  }, []);
+  }, [props]);
 
   const { name, price, url, sun, water, toxicity } = plant;
   return (
