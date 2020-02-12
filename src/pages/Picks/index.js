@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import store from '../../store';
 
@@ -23,72 +23,61 @@ import {
 
 import api from '../../services/api';
 
-class Picks extends Component {
-  constructor() {
-    super();
-    this.state = {
-      plants: [],
-    };
-  }
+function Picks() {
+  const [plants, setPlants] = useState([]);
 
-  componentDidMount() {
-    this.handleData();
-  }
+  useEffect(() => {
+    async function handleData() {
+      const { preferences } = store.getState();
+      const response = await api.get(
+        `?sun=${preferences.sunlight}&water=${preferences.water}&pets=${preferences.pet}`
+      );
+      setPlants(response.data);
+    }
+    handleData();
+  }, []);
 
-  handleData = async e => {
-    const { preferences } = store.getState();
-    const response = await api.get(
-      `?sun=${preferences.sunlight}&water=${preferences.water}&pets=${preferences.pet}`
-    );
-
-    this.setState({
-      plants: [...this.state.plants, ...response.data],
-    });
-  };
-
-  saveplant = id => {
+  function saveplant(id) {
     localStorage.setItem('plant', id);
-  };
-
-  render() {
-    return (
-      <>
-        <Container bgPrimary>
-          <PicksContainer>
-            <Header>
-              <Logo />
-              <IllustrationContainer>
-                <img src={HandPick} alt="Handle picking a plant" />
-              </IllustrationContainer>
-              <Title>Our picks for you</Title>
-            </Header>
-            <PlantContainer>
-              {this.state.plants.map(plant => (
-                <PlantCard key={plant.id}>
-                  <img src={plant.url} alt={`Plant ${plant.name}`} />
-                  <BuyPlant>
-                    <PlantTitle>{plant.name}</PlantTitle>
-                    <PlantInformations>
-                      <PlantPrice>${plant.price}</PlantPrice>
-                      <PlantAdditionals
-                        sun={plant.sun}
-                        water={plant.water}
-                        toxicity={plant.toxicity}
-                      />
-                    </PlantInformations>
-                    <NavLink to="/plant">
-                      <LargerButton onClick={() => this.saveplant(plant.id)}>
-                        buy now
-                      </LargerButton>
-                    </NavLink>
-                  </BuyPlant>
-                </PlantCard>
-              ))}
-            </PlantContainer>
-          </PicksContainer>
-        </Container>
-      </>
-    );
   }
+
+  return (
+    <>
+      <Container bgPrimary>
+        <PicksContainer>
+          <Header>
+            <Logo />
+            <IllustrationContainer>
+              <img src={HandPick} alt="Handle picking a plant" />
+            </IllustrationContainer>
+            <Title>Our picks for you</Title>
+          </Header>
+          <PlantContainer>
+            {plants.map(plant => (
+              <PlantCard key={plant.id}>
+                <img src={plant.url} alt={`Plant ${plant.name}`} />
+                <BuyPlant>
+                  <PlantTitle>{plant.name}</PlantTitle>
+                  <PlantInformations>
+                    <PlantPrice>${plant.price}</PlantPrice>
+                    <PlantAdditionals
+                      sun={plant.sun}
+                      water={plant.water}
+                      toxicity={plant.toxicity}
+                    />
+                  </PlantInformations>
+                  <NavLink to="/plant">
+                    <LargerButton onClick={() => saveplant(plant.id)}>
+                      buy now
+                    </LargerButton>
+                  </NavLink>
+                </BuyPlant>
+              </PlantCard>
+            ))}
+          </PlantContainer>
+        </PicksContainer>
+      </Container>
+    </>
+  );
 }
 export default Picks;
