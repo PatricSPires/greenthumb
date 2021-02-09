@@ -40,3 +40,6 @@ TODO:
 - [x] GT-39: refactor card component.
 - [x] GT-41: refactor a form component and add the MailSent screen.
 - [x] GT-42: add redux to control all preferences.
+- [x] GT-43: install typescript.
+- [ ] GT-44: create tests.
+- [ ] GT-45: refactor components.
