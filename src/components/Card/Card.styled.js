@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { colors, fontSize } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors, fontSize } from '../../shared/variables'
 
 export const Card = styled.button.attrs({
-  type: 'button',
+  type: 'button'
 })`
   width: 265px;
   background-color: ${colors.white};
@@ -54,4 +54,4 @@ export const Card = styled.button.attrs({
       }
     }
   }
-`;
+`

@@ -1,40 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import api from '../../services/api';
+import React, { useState, useEffect } from 'react'
+import api from '../../services/api'
 
-import { Purchase } from '../../components/Purchase';
-import Price from '../../components/Price';
+import { Purchase } from '../../components/Purchase'
+import Price from '../../components/Price'
 
-import { ReactComponent as Toxic } from '../../assets/icons/grey/toxic.svg';
-import { ReactComponent as Pet } from '../../assets/icons/grey/pet.svg';
-import { ReactComponent as HighSun } from '../../assets/icons/grey/highSun.svg';
-import { ReactComponent as LowSun } from '../../assets/icons/grey/lowSun.svg';
-import { ReactComponent as NoSun } from '../../assets/icons/grey/noSun.svg';
-import { ReactComponent as OneDrop } from '../../assets/icons/grey/oneDrop.svg';
-import { ReactComponent as TwoDrops } from '../../assets/icons/grey/twoDrops.svg';
-import { ReactComponent as ThreeDrops } from '../../assets/icons/grey/threeDrops.svg';
+import { ReactComponent as Toxic } from '../../assets/icons/grey/toxic.svg'
+import { ReactComponent as Pet } from '../../assets/icons/grey/pet.svg'
+import { ReactComponent as HighSun } from '../../assets/icons/grey/highSun.svg'
+import { ReactComponent as LowSun } from '../../assets/icons/grey/lowSun.svg'
+import { ReactComponent as NoSun } from '../../assets/icons/grey/noSun.svg'
+import { ReactComponent as OneDrop } from '../../assets/icons/grey/oneDrop.svg'
+import { ReactComponent as TwoDrops } from '../../assets/icons/grey/twoDrops.svg'
+import { ReactComponent as ThreeDrops } from '../../assets/icons/grey/threeDrops.svg'
 
-import Form from '../../components/Form';
+import Form from '../../components/Form'
 
-import Container from '../../components/Container';
-import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled';
-import PlantInformation from '../../components/PlantInformation';
-import { Informations } from './PlantStyles';
-import Logo from '../../components/Logo';
-import Header from '../../components/Header';
+import Container from '../../components/Container'
+import { BuyContainer } from '../../components/BuyContainer/BuyContainer.styled'
+import PlantInformation from '../../components/PlantInformation'
+import { Informations } from './PlantStyles'
+import Logo from '../../components/Logo'
+import Header from '../../components/Header'
 
 function Plant(props) {
-  const [plant, setPlant] = useState([]);
+  const [plant, setPlant] = useState([])
 
   useEffect(() => {
-    const { match } = props;
+    const { match } = props
     async function getPlant() {
-      const response = await api.get(`/plant?id=${match.params.id}`);
-      setPlant(response.data);
+      const response = await api.get(`/plant?id=${match.params.id}`)
+      setPlant(response.data)
     }
-    getPlant();
-  }, [props]);
+    getPlant()
+  }, [props])
 
-  const { name, price, url, sun, water, toxicity } = plant;
+  const { name, price, url, sun, water, toxicity } = plant
   return (
     <Container>
       <Header>
@@ -112,7 +112,7 @@ function Plant(props) {
         <Form />
       </BuyContainer>
     </Container>
-  );
+  )
 }
 
-export default Plant;
+export default Plant

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Title = styled.h1`
   font-size: 22px;
@@ -20,7 +20,7 @@ export const Title = styled.h1`
     margin-bottom: 20px;
     font-size: 30px;
   }
-`;
+`
 
 export const Subtitle = styled.h2`
   color: #6e6e6e;
@@ -36,7 +36,7 @@ export const Subtitle = styled.h2`
     max-width: 640px;
     margin-bottom: 48px;
   }
-`;
+`
 
 export const IllustrationContainer = styled.div`
   display: flex;
@@ -47,7 +47,7 @@ export const IllustrationContainer = styled.div`
     width: 90px;
     height: 74px;
   }
-`;
+`
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ export const LogoContainer = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
-`;
+`
 
 export const CardGroup = styled.div`
   display: flex;
@@ -76,7 +76,7 @@ export const CardGroup = styled.div`
     margin: 0 auto;
     height: auto;
   }
-`;
+`
 
 export const ButtonGroup = styled.div`
   display: flex;
@@ -95,4 +95,4 @@ export const ButtonGroup = styled.div`
   a {
     text-decoration: none;
   }
-`;
+`

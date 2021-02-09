@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import HeroMobile from '../../assets/illustrations/illustration-home-mobile.png';
-import HeroDesktop from '../../assets/illustrations/illustration-home.png';
+import styled from 'styled-components'
+import HeroMobile from '../../assets/illustrations/illustration-home-mobile.png'
+import HeroDesktop from '../../assets/illustrations/illustration-home.png'
 
 export const Container = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ export const Container = styled.div`
       margin-bottom: 96px;
     }
   }
-`;
+`
 
 export const Title = styled.h1`
   color: #0c261c;
@@ -63,4 +63,4 @@ export const Title = styled.h1`
     text-align: left;
     margin-bottom: 28px;
   }
-`;
+`

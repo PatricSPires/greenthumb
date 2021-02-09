@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { PriceComponent } from './Price.styled';
+import { PriceComponent } from './Price.styled'
 
 export default function Price({ price, fontSize }) {
-  return <PriceComponent fontSize={fontSize}>${price}</PriceComponent>;
+  return <PriceComponent fontSize={fontSize}>${price}</PriceComponent>
 }

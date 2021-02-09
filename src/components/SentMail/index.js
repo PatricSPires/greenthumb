@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Envelop from '../../assets/illustrations/envelop.png';
+import React from 'react'
+import { connect } from 'react-redux'
+import Envelop from '../../assets/illustrations/envelop.png'
 
-import { EmailSent } from './sentMail.styled';
+import { EmailSent } from './sentMail.styled'
 
 function SentMail({ sent }) {
   if (sent === true) {
@@ -12,11 +12,11 @@ function SentMail({ sent }) {
         <p>You will hear from us soon. Please check your e-mail!</p>
         <img src={Envelop} alt="" />
       </EmailSent>
-    );
+    )
   }
-  return <></>;
+  return <></>
 }
 
 export default connect(state => ({
-  sent: state.sentMail,
-}))(SentMail);
+  sent: state.sentMail
+}))(SentMail)

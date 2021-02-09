@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { HeaderComponent } from './Header.styled';
+import { HeaderComponent } from './Header.styled'
 
 export default function Header({ children }) {
-  return <HeaderComponent>{children}</HeaderComponent>;
+  return <HeaderComponent>{children}</HeaderComponent>
 }

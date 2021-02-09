@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors } from '../../shared/variables'
 
 export const Purchase = styled.div`
   max-width: 381px;
@@ -33,4 +33,4 @@ export const Purchase = styled.div`
   @media (min-width: 1024px) {
     padding: 0;
   }
-`;
+`

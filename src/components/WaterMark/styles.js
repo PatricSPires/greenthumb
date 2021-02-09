@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors } from '../../shared/variables'
 
 export const Container = styled.div`
   display: none;
@@ -14,17 +14,17 @@ export const Container = styled.div`
     justify-content: center;
     top: 188px;
   }
-`;
+`
 
 export const Stripe = styled.div`
   width: 2px;
   background-color: ${colors.green_pea};
   opacity: 41.48%;
   height: 429px;
-`;
+`
 
 export const Logo = styled.img`
   width: 208px;
   transform: rotate(270deg);
   margin-bottom: 130px;
-`;
+`

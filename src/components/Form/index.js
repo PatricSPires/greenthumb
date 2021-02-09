@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Formik, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import api from '../../services/api';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Formik, Form, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+import api from '../../services/api'
 
-import { FormContainer, Error, Input } from './Form.styled';
-import { SmallButton } from '../Button/Button.styled';
-import Label from '../Label';
-import SentMail from '../SentMail';
+import { FormContainer, Error, Input } from './Form.styled'
+import { SmallButton } from '../Button/Button.styled'
+import Label from '../Label'
+import SentMail from '../SentMail'
 
 class GreenThumbForm extends Component {
   handleSendMail = sent => {
-    const { dispatch } = this.props;
+    const { dispatch } = this.props
 
     dispatch({
       type: 'SEND_MAIL',
-      sent,
-    });
-  };
+      sent
+    })
+  }
 
   render() {
     return (
@@ -37,19 +37,19 @@ class GreenThumbForm extends Component {
                 .required('Your name is required'),
               email: Yup.string()
                 .email()
-                .required('Please provide a valid e-mail.'),
+                .required('Please provide a valid e-mail.')
             })}
             onSubmit={async values => {
-              const { name, email } = values;
-              const plant = localStorage.getItem('plant');
+              const { name, email } = values
+              const plant = localStorage.getItem('plant')
 
               await api
                 .post({
                   name,
                   email,
-                  id: plant,
+                  id: plant
                 })
-                .then(this.handleSendMail(true));
+                .then(this.handleSendMail(true))
             }}
           >
             {({ errors, touched, handleSubmit }) => {
@@ -79,14 +79,14 @@ class GreenThumbForm extends Component {
                     <SmallButton type="submit">send</SmallButton>
                   </Form>
                 </>
-              );
+              )
             }}
           </Formik>
           <SentMail />
         </FormContainer>
       </>
-    );
+    )
   }
 }
 
-export default connect()(GreenThumbForm);
+export default connect()(GreenThumbForm)

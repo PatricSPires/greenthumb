@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { colors, fontSize } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors, fontSize } from '../../shared/variables'
 
 export const SmallButton = styled.button.attrs(props => ({
   type: 'submit',
-  disabled: props.loading,
+  disabled: props.loading
 }))`
   background-color: ${props =>
     props.primary ? `${colors.green_pea}` : 'transparent'};
@@ -54,7 +54,7 @@ export const SmallButton = styled.button.attrs(props => ({
     max-width: 146px;
     width: 100%;
   }
-`;
+`
 
 export const MediumButton = styled(SmallButton)`
   width: 174px;
@@ -62,7 +62,7 @@ export const MediumButton = styled(SmallButton)`
   @media (min-width: 1024px) {
     width: 174px;
   }
-`;
+`
 
 export const LargerButton = styled(SmallButton)`
   max-width: 292px;
@@ -71,4 +71,4 @@ export const LargerButton = styled(SmallButton)`
   @media (min-width: 1024px) {
     max-width: 292px;
   }
-`;
+`

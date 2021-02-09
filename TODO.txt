@@ -43,3 +43,4 @@ TODO:
 - [x] GT-43: install typescript.
 - [ ] GT-44: create tests.
 - [ ] GT-45: refactor components.
+- [x] GT-46: fix lint problemas.

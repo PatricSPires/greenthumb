@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { Field } from 'formik';
-import { colors, fontSize } from '../../shared/variables';
+import styled, { css } from 'styled-components'
+import { Field } from 'formik'
+import { colors, fontSize } from '../../shared/variables'
 
 export const Input = styled(Field)`
   background-color: ${colors.white};
@@ -22,7 +22,7 @@ export const Input = styled(Field)`
       border: 1px solid ${colors.torch_red};
       outline: none;
     `}
-`;
+`
 
 export const FormContainer = styled.div`
   background-color: ${colors.wild_sand};
@@ -75,7 +75,7 @@ export const FormContainer = styled.div`
       background-color: transparent;
     }
   }
-`;
+`
 
 export const Error = styled.div`
   color: ${colors.torch_red};
@@ -84,4 +84,4 @@ export const Error = styled.div`
   font-size: ${fontSize['u-fontSize-12']};
   line-height: 27px;
   margin-bottom: 22px;
-`;
+`

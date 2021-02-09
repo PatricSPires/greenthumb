@@ -1,8 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import { LogoComponent } from './Logo.styled';
-import { ReactComponent as LogoImage } from '../../assets/logo/logo-greenthumb.svg';
+import { LogoComponent } from './Logo.styled'
+import { ReactComponent as LogoImage } from '../../assets/logo/logo-greenthumb.svg'
 
 export default function Logo() {
   return (
@@ -11,5 +11,5 @@ export default function Logo() {
         <LogoImage />
       </NavLink>
     </LogoComponent>
-  );
+  )
 }

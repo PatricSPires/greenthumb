@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const PlantAdditionalsComponent = styled.div`
   display: flex;
@@ -10,4 +10,4 @@ export const PlantAdditionalsComponent = styled.div`
   img {
     width: auto;
   }
-`;
+`

@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Main from './pages/Main';
-import Sunlight from './pages/Sunlight';
-import Water from './pages/Water';
-import Pets from './pages/Pets';
-import Picks from './pages/Picks';
-import Plant from './pages/Plant';
+import Main from './pages/Main'
+import Sunlight from './pages/Sunlight'
+import Water from './pages/Water'
+import Pets from './pages/Pets'
+import Picks from './pages/Picks'
+import Plant from './pages/Plant'
 
 export default function Routes() {
   return (
@@ -20,5 +20,5 @@ export default function Routes() {
         <Route path="/plant/:id" component={Plant} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }

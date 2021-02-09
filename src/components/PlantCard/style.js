@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors, fontSize } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors, fontSize } from '../../shared/variables'
 
 export const Container = styled.div`
   @media (min-width: 768px) {
@@ -11,7 +11,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
   }
-`;
+`
 
 export const PlantContainer = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ export const PlantContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-`;
+`
 
 export const PlantCard = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ export const PlantCard = styled.div`
     width: 200px;
     margin: 0 auto;
   }
-`;
+`
 
 export const PlantTitle = styled.h1`
   font-style: normal;
@@ -49,14 +49,14 @@ export const PlantTitle = styled.h1`
   font-size: ${fontSize['u-fontSize-18']};
   line-height: 28px;
   color: ${colors.green_pea};
-`;
+`
 
 export const PlantPrice = styled.p`
   font-weight: 300;
   font-size: ${fontSize['u-fontSize-18']};
   line-height: 28px;
   color: ${colors.dove_gray};
-`;
+`
 
 export const BuyPlant = styled.div`
   display: flex;
@@ -69,9 +69,9 @@ export const BuyPlant = styled.div`
   img {
     width: 22px;
   }
-`;
+`
 
 export const PlantInformations = styled.div`
   display: flex;
   justify-content: space-between;
-`;
+`

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const BuyContainer = styled.div`
   @media (min-width: 1024px) {
@@ -8,4 +8,4 @@ export const BuyContainer = styled.div`
     justify-content: space-between;
     margin-top: 138px;
   }
-`;
+`

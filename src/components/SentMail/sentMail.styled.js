@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors, fontSize } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors, fontSize } from '../../shared/variables'
 
 export const EmailSent = styled.div`
   display: flex;
@@ -44,4 +44,4 @@ export const EmailSent = styled.div`
       margin: 0 auto;
     }
   }
-`;
+`

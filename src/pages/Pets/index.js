@@ -1,30 +1,27 @@
+/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
-
-import {
-  Title,
-  Subtitle,
-  IllustrationContainer,
-  CardGroup,
-  ButtonGroup,
-} from './PetStyles';
-
-import { Card } from '../../components/Card/Card.styled';
-import { MediumButton } from '../../components/Button/Button.styled';
-
-import Dog from '../../assets/illustrations/dog.png';
-import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
+import { bindActionCreators } from 'redux';
 import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
-import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
+import { ReactComponent as Pet } from '../../assets/icons/coral/pet.svg';
 import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
-import * as PreferenceActions from '../../store/modules/preferences/actions';
-
-import Container from '../../components/Container';
+import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
+import Dog from '../../assets/illustrations/dog.png';
 import { AskContainer } from '../../components/AskContainer';
+import { MediumButton } from '../../components/Button/Button.styled';
+import { Card } from '../../components/Card/Card.styled';
+import Container from '../../components/Container';
 import Header from '../../components/Header';
 import Logo from '../../components/Logo';
+import * as PreferenceActions from '../../store/modules/preferences/actions';
+import {
+  ButtonGroup,
+  CardGroup,
+  IllustrationContainer,
+  Subtitle,
+  Title
+} from './PetStyles';
 
 class Pets extends Component {
   handleAddPreference(preference) {
@@ -57,7 +54,7 @@ class Pets extends Component {
               </Card>
               <Card primary onClick={() => this.handleAddPreference(false)}>
                 <NoAnswer />
-                No/They don't care
+                No/They don&apos;t care
               </Card>
             </CardGroup>
             <ButtonGroup>

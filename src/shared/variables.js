@@ -13,8 +13,8 @@ export const colors = {
   atomic_tangerine: '#fd9872',
   acapulco: '#7BAF9E',
   concrete: '#f2f2f2',
-  torch_red: '#f71d1d',
-};
+  torch_red: '#f71d1d'
+}
 
 export const fontSize = {
   'u-fontSize-8': '0.5em',
@@ -31,8 +31,8 @@ export const fontSize = {
   'u-fontSize-40': '2.5em',
   'u-fontSize-50': '3.125em',
   'u-fontSize-65': '4.0625em',
-  'u-fontSize-66': '4.125em',
-};
+  'u-fontSize-66': '4.125em'
+}
 
 export const size = {
   mobileS: '320px',
@@ -40,8 +40,8 @@ export const size = {
   mobileL: '425px',
   tablet: '768px',
   laptop: '1024px',
-  laptopL: '1440px',
-};
+  laptopL: '1440px'
+}
 
 export const device = {
   mobileS: `(min-width: ${size.mobileS})`,
@@ -49,5 +49,5 @@ export const device = {
   mobileL: `(min-width: ${size.mobileL})`,
   tablet: `(min-width: ${size.tablet})`,
   laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-};
+  laptopL: `(min-width: ${size.laptopL})`
+}

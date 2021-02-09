@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap');
@@ -25,4 +25,4 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
-`;
+`

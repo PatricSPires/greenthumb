@@ -1,12 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import { Title, Container } from './MainStyles';
-import { MediumButton } from '../../components/Button/Button.styled';
+import { Title, Container } from './MainStyles'
+import { MediumButton } from '../../components/Button/Button.styled'
 
-import Logo from '../../assets/logo/logo-greenthumb.svg';
+import Logo from '../../assets/logo/logo-greenthumb.svg'
 
-import { ReactComponent as ArrowRight } from '../../assets/icons/white/whiteArrow.svg';
+import { ReactComponent as ArrowRight } from '../../assets/icons/white/whiteArrow.svg'
 
 export default function Main() {
   return (
@@ -22,5 +22,5 @@ export default function Main() {
         </NavLink>
       </Container>
     </>
-  );
+  )
 }

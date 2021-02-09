@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors, fontSize } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors, fontSize } from '../../shared/variables'
 
 export const LabelComponent = styled.label`
   font-size: ${fontSize['u-fontSize-16']};
@@ -12,4 +12,4 @@ export const LabelComponent = styled.label`
   @media (min-width: 1024px) {
     padding-left: 0;
   }
-`;
+`

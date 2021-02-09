@@ -1,35 +1,35 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { NavLink } from 'react-router-dom'
 import {
   Title,
   IllustrationContainer,
   CardGroup,
-  ButtonGroup,
-} from './SunlightStyles';
+  ButtonGroup
+} from './SunlightStyles'
 
-import { MediumButton } from '../../components/Button/Button.styled';
+import { MediumButton } from '../../components/Button/Button.styled'
 
-import Sun from '../../assets/illustrations/sun.png';
-import { ReactComponent as HighSun } from '../../assets/icons/coral/high-sun.svg';
-import { ReactComponent as LowhSun } from '../../assets/icons/coral/low-sun.svg';
-import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg';
-import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg';
-import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg';
+import Sun from '../../assets/illustrations/sun.png'
+import { ReactComponent as HighSun } from '../../assets/icons/coral/high-sun.svg'
+import { ReactComponent as LowhSun } from '../../assets/icons/coral/low-sun.svg'
+import { ReactComponent as NoAnswer } from '../../assets/icons/coral/no-answer.svg'
+import { ReactComponent as GreenArrowRight } from '../../assets/icons/green/greenArrowRight.svg'
+import { ReactComponent as GreenArrowLeft } from '../../assets/icons/green/greenArrowLeft.svg'
 
-import Container from '../../components/Container';
-import { AskContainer } from '../../components/AskContainer';
-import Header from '../../components/Header';
-import Logo from '../../components/Logo';
-import { Card } from '../../components/Card/Card.styled';
+import Container from '../../components/Container'
+import { AskContainer } from '../../components/AskContainer'
+import Header from '../../components/Header'
+import Logo from '../../components/Logo'
+import { Card } from '../../components/Card/Card.styled'
 
-import * as PreferenceActions from '../../store/modules/preferences/actions';
+import * as PreferenceActions from '../../store/modules/preferences/actions'
 
 class Sunlight extends Component {
   handleAddPreference(preference) {
-    const { addSunlight } = this.props;
-    addSunlight(preference);
+    const { addSunlight } = this.props
+    addSunlight(preference)
   }
 
   render() {
@@ -78,11 +78,11 @@ class Sunlight extends Component {
           </AskContainer>
         </Container>
       </>
-    );
+    )
   }
 }
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators(PreferenceActions, dispatch);
+  bindActionCreators(PreferenceActions, dispatch)
 
-export default connect(null, mapDispatchToProps)(Sunlight);
+export default connect(null, mapDispatchToProps)(Sunlight)

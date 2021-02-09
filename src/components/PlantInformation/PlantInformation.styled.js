@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors } from '../../shared/variables';
+import styled from 'styled-components'
+import { colors } from '../../shared/variables'
 
 export const PlantInformationComponent = styled.div`
   display: flex;
@@ -13,4 +13,4 @@ export const PlantInformationComponent = styled.div`
     height: 28px;
     margin-right: 16px;
   }
-`;
+`

@@ -1,41 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import store from '../../store';
-
-import { Title, IllustrationContainer } from './PicksStyles';
-import HandPick from '../../assets/illustrations/pick.png';
-import { LargerButton } from '../../components/Button/Button.styled';
-
-import Container from '../../components/Container';
-import { PicksContainer } from '../../components/PicksContainer/PicksContainer.styled';
-import Header from '../../components/Header';
-import Logo from '../../components/Logo';
-import PlantAdditionals from '../../components/PlantAdditionals';
-
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import HandPick from '../../assets/illustrations/pick.png'
+import { LargerButton } from '../../components/Button/Button.styled'
+import Container from '../../components/Container'
+import Header from '../../components/Header'
+import Logo from '../../components/Logo'
+import { PicksContainer } from '../../components/PicksContainer/PicksContainer.styled'
+import PlantAdditionals from '../../components/PlantAdditionals'
 import {
-  PlantContainer,
-  PlantCard,
-  PlantTitle,
-  PlantPrice,
   BuyPlant,
+  PlantCard,
+  PlantContainer,
   PlantInformations,
-} from '../../components/PlantCard/style';
-
-import api from '../../services/api';
+  PlantPrice,
+  PlantTitle
+} from '../../components/PlantCard/style'
+import api from '../../services/api'
+import store from '../../store'
+import { IllustrationContainer, Title } from './PicksStyles'
 
 function Picks() {
-  const [plants, setPlants] = useState([]);
+  const [plants, setPlants] = useState([])
 
   useEffect(() => {
     async function handleData() {
-      const { preferences } = store.getState();
+      const { preferences } = store.getState()
       const response = await api.get(
         `?sun=${preferences.sunlight}&water=${preferences.water}&pets=${preferences.pet}`
-      );
-      setPlants(response.data);
+      )
+      setPlants(response.data)
     }
-    handleData();
-  }, []);
+    handleData()
+  }, [])
 
   return (
     <>
@@ -72,6 +68,6 @@ function Picks() {
         </PicksContainer>
       </Container>
     </>
-  );
+  )
 }
-export default Picks;
+export default Picks
