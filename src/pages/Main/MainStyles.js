@@ -57,9 +57,9 @@ export const Title = styled.h1`
   margin-bottom: 36px;
 
   @media (min-width: 1024px) {
-    max-width: 433px;
+    max-width: 460px;
     margin: 0;
-    font-size: 66px;
+    font-size: 80px;
     text-align: left;
     margin-bottom: 28px;
   }
