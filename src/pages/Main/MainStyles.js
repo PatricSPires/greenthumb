@@ -13,7 +13,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-position-x: -14%;
   background-position-y: 106%;
-  background-size: 84%;
+  background-size: 76%;
   height: 100vh;
 
   @media (min-width: 768px) {
@@ -29,7 +29,7 @@ export const Container = styled.div`
     background-position-x: right;
     background-position-y: bottom;
     background-size: 80%;
-    background-size: 70%;
+    background-size: 60%;
   }
 
   .logo {
