@@ -42,5 +42,23 @@ TODO:
 - [x] GT-42: add redux to control all preferences.
 - [x] GT-43: install typescript.
 - [ ] GT-44: create tests.
-- [ ] GT-45: refactor components.
+- [ ] GT-45: refactor components:
+  - [ ]: AskContainer;
+  - [ ]: Button;
+  - [ ]: BuyContainer;
+  - [ ]: Card;
+  - [ ]: Container;
+  - [ ]: Form;
+  - [ ]: Header;
+  - [ ]: Label;
+  - [ ]: Logo;
+  - [ ]: PicksContainer;
+  - [ ]: PlantAdditionals;
+  - [ ]: PlantCard;
+  - [ ]: PlantInformation;
+  - [ ]: Price;
+  - [ ]: Purchase;
+  - [ ]: SentMail;
+  - [ ]: WaterMark;
 - [x] GT-46: fix lint problemas.
+- [x] GT-47: create theme;
